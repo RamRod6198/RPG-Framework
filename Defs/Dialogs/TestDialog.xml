@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<Quests.DialogDef>
+		<defName>TestDialog</defName>
+		<title>Test</title>
+		<text>Test1</text>
+		<options>
+			<li>
+				<text>Hello</text>
+				<actions>
+					<li Class="Quests.Action_GoToNextDialog">
+						<nextDialog>TestDialogTwo</nextDialog>
+					</li>
+				</actions>
+			</li>
+			<li>
+				<text>Bye</text>
+				<actions>
+					<li Class="Quests.Action_EndDialog"/>
+				</actions>
+			</li>
+			<li>
+				<text>Insult</text>
+				<actions>
+					<li Class="Quests.Action_StartFight"/>
+					<li Class="Quests.Action_AffectRelationship">
+						<affectGoodwill>-20</affectGoodwill>
+					</li>
+					<li Class="Quests.Action_EndDialog"/>
+				</actions>
+			</li>
+			<li>
+				<text>Take quest</text>
+				<actions>
+					<li Class="Quests.Action_TakeQuest">
+						<questDef>OpportunitySite_DownedRefugee</questDef>
+					</li>
+					<li Class="Quests.Action_EndDialog"/>
+				</actions>
+			</li>
+			<li>
+				<text>Start trade</text>
+				<actions>
+					<li Class="Quests.Action_StartTrade">
+						<questDef>OpportunitySite_DownedRefugee</questDef>
+					</li>
+					<li Class="Quests.Action_EndDialog"/>
+				</actions>
+			</li>
+		</options>
+	</Quests.DialogDef>
+
+	<Quests.DialogDef>
+		<defName>TestDialogTwo</defName>
+		<title>Welcome to dialog two</title>
+		<text>Welcome to dialog two</text>
+		<options>
+			<li>
+				<text>Bye</text>
+				<actions>
+					<li Class="Quests.Action_EndDialog">
+					</li>
+				</actions>
+			</li>
+			<li>
+				<text>Insult</text>
+				<actions>
+					<li Class="Quests.Action_StartFight"/>
+					<li Class="Quests.Action_AffectRelationship">
+						<affectGoodwill>-20</affectGoodwill>
+					</li>
+					<li Class="Quests.Action_EndDialog"/>
+				</actions>
+			</li>
+		</options>
+	</Quests.DialogDef>
+
+</Defs>

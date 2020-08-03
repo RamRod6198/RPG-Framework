@@ -1,0 +1,15 @@
+<Defs>
+
+	<JobDef>
+		<defName>TakeQuest</defName>
+		<driverClass>Quests.JobDriver_TakeQuest</driverClass>
+		<reportString>talking to TargetA.</reportString>
+	</JobDef>
+	
+		<JobDef>
+		<defName>StartDialog</defName>
+		<driverClass>Quests.JobDriver_StartDialog</driverClass>
+		<reportString>talking to TargetA.</reportString>
+	</JobDef>
+
+</Defs>
