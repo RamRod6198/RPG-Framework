@@ -12,9 +12,12 @@ D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\obj\Debug\RPGFramework.
 D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\obj\Debug\RPGFramework.csproj.CoreCompileInputs.cache
 D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\obj\Debug\RPGFramework.dll
 D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\obj\Debug\RPGFramework.pdb
+<<<<<<< HEAD
 c:\GAMES\Rimworld\Mods\RPG-Framework\Source\RPGFramework\obj\Debug\RPGFramework.csprojAssemblyReference.cache
 c:\GAMES\Rimworld\Mods\RPG-Framework\Source\RPGFramework\obj\Debug\RPGFramework.csproj.CoreCompileInputs.cache
 c:\GAMES\Rimworld\Mods\RPG-Framework\Source\RPGFramework\obj\Debug\RPGFramework.dll
 c:\GAMES\Rimworld\Mods\RPG-Framework\Source\RPGFramework\obj\Debug\RPGFramework.pdb
 c:\GAMES\Rimworld\Mods\RPG-Framework\Assemblies\RPGFramework.dll
 c:\GAMES\Rimworld\Mods\RPG-Framework\Assemblies\RPGFramework.pdb
+=======
+>>>>>>> 6765b49273e3a65219f60581fa18f517efd372de
