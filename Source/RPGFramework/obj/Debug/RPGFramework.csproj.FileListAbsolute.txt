@@ -1,0 +1,20 @@
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\RPGFramework\bin\Debug\RPGFramework.dll
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\RPGFramework\bin\Debug\RPGFramework.pdb
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\RPGFramework\obj\Debug\RPGFramework.csprojAssemblyReference.cache
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\RPGFramework\obj\Debug\RPGFramework.csproj.CoreCompileInputs.cache
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\RPGFramework\obj\Debug\RPGFramework.dll
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\RPGFramework\obj\Debug\RPGFramework.pdb
+D:\GAMES\RimWorld\Mods\RPG Framework\Assemblies\RPGFramework.dll
+D:\GAMES\RimWorld\Mods\RPG Framework\Assemblies\RPGFramework.pdb
+D:\GAMES\RimWorld\Mods\Assemblies\RPGFramework.dll
+D:\GAMES\RimWorld\Mods\Assemblies\RPGFramework.pdb
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\obj\Debug\RPGFramework.csprojAssemblyReference.cache
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\obj\Debug\RPGFramework.csproj.CoreCompileInputs.cache
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\obj\Debug\RPGFramework.dll
+D:\GAMES\RimWorld\Mods\RPG Framework\Source\RPGFramework\obj\Debug\RPGFramework.pdb
+c:\GAMES\Rimworld\Mods\RPG-Framework\Source\RPGFramework\obj\Debug\RPGFramework.csprojAssemblyReference.cache
+c:\GAMES\Rimworld\Mods\RPG-Framework\Source\RPGFramework\obj\Debug\RPGFramework.csproj.CoreCompileInputs.cache
+c:\GAMES\Rimworld\Mods\RPG-Framework\Source\RPGFramework\obj\Debug\RPGFramework.dll
+c:\GAMES\Rimworld\Mods\RPG-Framework\Source\RPGFramework\obj\Debug\RPGFramework.pdb
+c:\GAMES\Rimworld\Mods\RPG-Framework\Assemblies\RPGFramework.dll
+c:\GAMES\Rimworld\Mods\RPG-Framework\Assemblies\RPGFramework.pdb

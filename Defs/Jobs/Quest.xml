@@ -1,0 +1,9 @@
+<Defs>
+
+	<JobDef>
+		<defName>StartDialog</defName>
+		<driverClass>Quests.JobDriver_StartDialog</driverClass>
+		<reportString>talking to TargetA.</reportString>
+	</JobDef>
+
+</Defs>
