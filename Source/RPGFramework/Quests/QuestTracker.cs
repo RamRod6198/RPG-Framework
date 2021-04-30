@@ -40,32 +40,19 @@ namespace Quests
 			}
 		}
 
-<<<<<<< HEAD
 		public void AddQuestGiver(Pawn pawn, List<QuestScriptDef> specificQuests = null, DialogDef startDialog = null)
-=======
-		public void AddQuestGiver(Pawn pawn, List<QuestScriptDef> specificQuests = null)
->>>>>>> 6765b49273e3a65219f60581fa18f517efd372de
 		{
 			var comp = new CompQuestGiver();
 			comp.parent = pawn;
 			comp.specificQuests = specificQuests;
-<<<<<<< HEAD
 			comp.startDialog = startDialog;
-=======
->>>>>>> 6765b49273e3a65219f60581fa18f517efd372de
 			Log.Message("Giving comp to " + pawn);
 			pawn.AllComps.Add(comp);
 		}
 
-<<<<<<< HEAD
 		public void CreateQuestGiver(Pawn pawn, List<QuestScriptDef> specificQuests = null, DialogDef startDialog = null)
 		{
 			this.AddQuestGiver(pawn, specificQuests, startDialog);
-=======
-		public void CreateQuestGiver(Pawn pawn, List<QuestScriptDef> specificQuests = null)
-		{
-			this.AddQuestGiver(pawn, specificQuests);
->>>>>>> 6765b49273e3a65219f60581fa18f517efd372de
 			var config = new QuestConfig();
 			if (this.questTracker == null)
 			{
@@ -76,8 +63,7 @@ namespace Quests
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Collections.Look<Pawn, QuestConfig>(ref this.questTracker, "questTracker"
-				, LookMode.Reference, LookMode.Deep, ref questKeys, ref questValues);
+			Scribe_Collections.Look<Pawn, QuestConfig>(ref this.questTracker, "questTracker", LookMode.Reference, LookMode.Deep, ref questKeys, ref questValues);
 		}
 	}
 }

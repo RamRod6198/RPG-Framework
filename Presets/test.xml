@@ -1,0 +1,5477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Blueprint>
+	<Pawns>
+		<li>
+			<def>Cat</def>
+			<id>Cat11310</id>
+			<map>0</map>
+			<pos>(126, 0, 128)</pos>
+			<rot>3</rot>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<kindDef>Cat</kindDef>
+			<gender>Female</gender>
+			<name Class="NameSingle">
+				<name>Wild</name>
+			</name>
+			<mindState>
+				<meleeThreat>null</meleeThreat>
+				<enemyTarget>null</enemyTarget>
+				<knownExploder>null</knownExploder>
+				<lastMannedThing>null</lastMannedThing>
+				<lastAttackedTarget>(0, 0, 0)</lastAttackedTarget>
+				<thinkData>
+					<keys>
+						<li>2022598732</li>
+						<li>1963597554</li>
+						<li>231176685</li>
+						<li>-1861840506</li>
+					</keys>
+					<values>
+						<li>245</li>
+						<li>245</li>
+						<li>245</li>
+						<li>245</li>
+					</values>
+				</thinkData>
+				<lastJobTag>Idle</lastJobTag>
+				<lastEngageTargetTick>-99999</lastEngageTargetTick>
+				<lastAttackTargetTick>-99999</lastAttackTargetTick>
+				<canFleeIndividual>True</canFleeIndividual>
+				<lastMeleeThreatHarmTick>-99999</lastMeleeThreatHarmTick>
+				<duty IsNull="True" />
+				<mentalStateHandler>
+					<curState IsNull="True" />
+				</mentalStateHandler>
+				<mentalBreaker />
+				<inspirationHandler>
+					<curState IsNull="True" />
+				</inspirationHandler>
+				<priorityWork>
+					<prioritizedCell>(-1000, -1000, -1000)</prioritizedCell>
+				</priorityWork>
+				<lastSelfTendTick>-99999</lastSelfTendTick>
+			</mindState>
+			<jobs>
+				<curJob>
+					<commTarget>null</commTarget>
+					<verbToUse>null</verbToUse>
+					<bill>null</bill>
+					<lord>null</lord>
+					<quest>null</quest>
+					<def>GotoWander</def>
+					<loadID>103</loadID>
+					<targetA>(121, 0, 125)</targetA>
+					<targetQueueA IsNull="True" />
+					<targetQueueB IsNull="True" />
+					<countQueue IsNull="True" />
+					<startTick>245</startTick>
+					<checkOverrideOnExpire>True</checkOverrideOnExpire>
+					<placedThings IsNull="True" />
+					<locomotionUrgency>Walk</locomotionUrgency>
+					<jobGiverThinkTree>Animal</jobGiverThinkTree>
+					<psyfocusTargetLast>-1</psyfocusTargetLast>
+					<ability>null</ability>
+					<lastJobGiverKey>1944023624</lastJobGiverKey>
+				</curJob>
+				<curDriver Class="JobDriver_Goto">
+					<curToilIndex>0</curToilIndex>
+					<ticksLeftThisToil>-77</ticksLeftThisToil>
+					<curToilCompleteMode>PatherArrival</curToilCompleteMode>
+					<startTick>245</startTick>
+					<locomotionUrgencySameAs>null</locomotionUrgencySameAs>
+				</curDriver>
+				<jobQueue>
+					<jobs />
+				</jobQueue>
+			</jobs>
+			<stances>
+				<staggerUntilTick>-1</staggerUntilTick>
+				<stunner>
+					<showStunMote>True</showStunMote>
+				</stunner>
+				<curStance Class="Stance_Mobile" />
+			</stances>
+			<verbTracker>
+				<verbs IsNull="True" />
+			</verbTracker>
+			<natives>
+				<verbTracker>
+					<verbs IsNull="True" />
+				</verbTracker>
+			</natives>
+			<meleeVerbs>
+				<curMeleeVerb>null</curMeleeVerb>
+				<terrainVerbs IsNull="True" />
+			</meleeVerbs>
+			<rotationTracker />
+			<pather>
+				<nextCell>(125, 0, 127)</nextCell>
+				<nextCellCostLeft>41</nextCellCostLeft>
+				<nextCellCostInitial>50</nextCellCostInitial>
+				<peMode>OnCell</peMode>
+				<lastMovedTick>322</lastMovedTick>
+				<destination>(121, 0, 125)</destination>
+			</pather>
+			<carryTracker>
+				<innerContainer>
+					<maxStacks>1</maxStacks>
+					<innerList />
+				</innerContainer>
+			</carryTracker>
+			<apparel IsNull="True" />
+			<story IsNull="True" />
+			<equipment IsNull="True" />
+			<drafter IsNull="True" />
+			<ageTracker>
+				<ageBiologicalTicks>6168848</ageBiologicalTicks>
+				<birthAbsTicks>-5853526</birthAbsTicks>
+			</ageTracker>
+			<healthTracker>
+				<beCarriedByCaravanIfSick>False</beCarriedByCaravanIfSick>
+				<hediffSet>
+					<hediffs />
+				</hediffSet>
+				<surgeryBills>
+					<bills />
+				</surgeryBills>
+				<immunity>
+					<imList />
+				</immunity>
+			</healthTracker>
+			<records>
+				<records>
+					<vals>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>320</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+					</vals>
+				</records>
+				<storyRelevance>20</storyRelevance>
+				<battleActive>null</battleActive>
+			</records>
+			<inventory>
+				<itemsNotForSale />
+				<innerContainer>
+					<innerList />
+				</innerContainer>
+			</inventory>
+			<filth>
+				<carriedFilth />
+			</filth>
+			<needs>
+				<needs>
+					<li Class="Need_Food">
+						<def>Food</def>
+						<curLevel>0.1732753</curLevel>
+						<lastNonStarvingTick>233</lastNonStarvingTick>
+					</li>
+					<li Class="Need_Rest">
+						<def>Rest</def>
+						<curLevel>0.9011356</curLevel>
+					</li>
+				</needs>
+			</needs>
+			<guest IsNull="True" />
+			<guilt IsNull="True" />
+			<royalty IsNull="True" />
+			<social>
+				<directRelations />
+				<relativeInvolvedInRescueQuest>null</relativeInvolvedInRescueQuest>
+			</social>
+			<psychicEntropy>
+				<currentPsyfocus>0.6516313</currentPsyfocus>
+				<limitEntropyAmount>True</limitEntropyAmount>
+			</psychicEntropy>
+			<ownership IsNull="True" />
+			<interactions />
+			<skills IsNull="True" />
+			<abilities>
+				<abilities />
+			</abilities>
+			<workSettings IsNull="True" />
+			<trader IsNull="True" />
+			<outfits IsNull="True" />
+			<drugs IsNull="True" />
+			<foodRestriction IsNull="True" />
+			<timetable IsNull="True" />
+			<playerSettings>
+				<medCare>HerbalOrWorse</medCare>
+				<areaAllowed>null</areaAllowed>
+				<master>null</master>
+			</playerSettings>
+			<training>
+				<wantedTrainables>
+					<vals>
+						<li>False</li>
+						<li>False</li>
+						<li>False</li>
+						<li>False</li>
+						<li>True</li>
+					</vals>
+				</wantedTrainables>
+				<steps>
+					<vals>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>5</li>
+					</vals>
+				</steps>
+				<learned>
+					<vals>
+						<li>False</li>
+						<li>False</li>
+						<li>False</li>
+						<li>False</li>
+						<li>True</li>
+					</vals>
+				</learned>
+			</training>
+		</li>
+		<li>
+			<def>Human</def>
+			<id>Human656</id>
+			<map>0</map>
+			<pos>(126, 0, 128)</pos>
+			<rot>2</rot>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<kindDef>Colonist</kindDef>
+			<name Class="NameTriple">
+				<first>Logan</first>
+				<nick>Logan</nick>
+				<last>Pennington</last>
+			</name>
+			<mindState>
+				<meleeThreat>null</meleeThreat>
+				<enemyTarget>null</enemyTarget>
+				<knownExploder>null</knownExploder>
+				<lastMannedThing>null</lastMannedThing>
+				<lastAttackedTarget>(0, 0, 0)</lastAttackedTarget>
+				<thinkData>
+					<keys />
+					<values />
+				</thinkData>
+				<lastJobTag>Idle</lastJobTag>
+				<nextApparelOptimizeTick>8252</nextApparelOptimizeTick>
+				<lastEngageTargetTick>-99999</lastEngageTargetTick>
+				<lastAttackTargetTick>-99999</lastAttackTargetTick>
+				<canFleeIndividual>True</canFleeIndividual>
+				<lastMeleeThreatHarmTick>-99999</lastMeleeThreatHarmTick>
+				<duty IsNull="True" />
+				<mentalStateHandler>
+					<curState IsNull="True" />
+				</mentalStateHandler>
+				<mentalBreaker />
+				<inspirationHandler>
+					<curState IsNull="True" />
+				</inspirationHandler>
+				<priorityWork>
+					<prioritizedCell>(-1000, -1000, -1000)</prioritizedCell>
+				</priorityWork>
+				<lastSelfTendTick>-99999</lastSelfTendTick>
+			</mindState>
+			<jobs>
+				<curJob>
+					<commTarget>null</commTarget>
+					<verbToUse>null</verbToUse>
+					<bill>null</bill>
+					<lord>null</lord>
+					<quest>null</quest>
+					<def>GotoWander</def>
+					<loadID>104</loadID>
+					<targetA>(126, 0, 126)</targetA>
+					<targetQueueA IsNull="True" />
+					<targetQueueB IsNull="True" />
+					<countQueue IsNull="True" />
+					<startTick>245</startTick>
+					<checkOverrideOnExpire>True</checkOverrideOnExpire>
+					<placedThings IsNull="True" />
+					<locomotionUrgency>Walk</locomotionUrgency>
+					<jobGiverThinkTree>Humanlike</jobGiverThinkTree>
+					<psyfocusTargetLast>-1</psyfocusTargetLast>
+					<ability>null</ability>
+					<lastJobGiverKey>-1781508684</lastJobGiverKey>
+				</curJob>
+				<curDriver Class="JobDriver_Goto">
+					<curToilIndex>0</curToilIndex>
+					<ticksLeftThisToil>-77</ticksLeftThisToil>
+					<curToilCompleteMode>PatherArrival</curToilCompleteMode>
+					<startTick>245</startTick>
+					<locomotionUrgencySameAs>null</locomotionUrgencySameAs>
+				</curDriver>
+				<jobQueue>
+					<jobs />
+				</jobQueue>
+			</jobs>
+			<stances>
+				<staggerUntilTick>-1</staggerUntilTick>
+				<stunner>
+					<showStunMote>True</showStunMote>
+				</stunner>
+				<curStance Class="Stance_Mobile" />
+			</stances>
+			<verbTracker>
+				<verbs IsNull="True" />
+			</verbTracker>
+			<natives>
+				<verbTracker>
+					<verbs IsNull="True" />
+				</verbTracker>
+			</natives>
+			<meleeVerbs>
+				<curMeleeVerb>null</curMeleeVerb>
+				<terrainVerbs IsNull="True" />
+			</meleeVerbs>
+			<rotationTracker />
+			<pather>
+				<nextCell>(126, 0, 127)</nextCell>
+				<nextCellCostLeft>53</nextCellCostLeft>
+				<nextCellCostInitial>64</nextCellCostInitial>
+				<peMode>OnCell</peMode>
+				<cellsUntilClamor>11</cellsUntilClamor>
+				<lastMovedTick>322</lastMovedTick>
+				<destination>(126, 0, 126)</destination>
+			</pather>
+			<carryTracker>
+				<innerContainer>
+					<maxStacks>1</maxStacks>
+					<innerList />
+				</innerContainer>
+			</carryTracker>
+			<apparel>
+				<wornApparel>
+					<innerList>
+						<li>
+							<def>Apparel_Pants</def>
+							<id>Apparel_Pants657</id>
+							<health>130</health>
+							<stackCount>1</stackCount>
+							<stuff>Synthread</stuff>
+							<questTags IsNull="True" />
+							<quality>Normal</quality>
+						</li>
+						<li>
+							<def>Apparel_BasicShirt</def>
+							<id>Apparel_BasicShirt658</id>
+							<health>130</health>
+							<stackCount>1</stackCount>
+							<stuff>Synthread</stuff>
+							<questTags IsNull="True" />
+							<quality>Normal</quality>
+						</li>
+					</innerList>
+				</wornApparel>
+				<lockedApparel />
+				<lastApparelWearoutTick>250</lastApparelWearoutTick>
+			</apparel>
+			<story>
+				<childhood>Pyromaniac18</childhood>
+				<adulthood>Evangelist39</adulthood>
+				<bodyType>Male</bodyType>
+				<crownType>Average</crownType>
+				<headGraphicPath>Things/Pawn/Humanlike/Heads/Male/Male_Average_Pointy</headGraphicPath>
+				<hairDef>Lackland</hairDef>
+				<hairColor>RGBA(0.300, 0.200, 0.100, 1.000)</hairColor>
+				<melanin>0.443152</melanin>
+				<traits>
+					<allTraits>
+						<li>
+							<def>Pyromaniac</def>
+						</li>
+						<li>
+							<def>Wimp</def>
+						</li>
+						<li>
+							<def>Bisexual</def>
+						</li>
+					</allTraits>
+				</traits>
+				<birthLastName>Pennington</birthLastName>
+			</story>
+			<equipment>
+				<equipment>
+					<innerList />
+				</equipment>
+				<bondedWeapon>null</bondedWeapon>
+			</equipment>
+			<drafter>
+				<autoUndrafter />
+			</drafter>
+			<ageTracker>
+				<ageBiologicalTicks>78590051</ageBiologicalTicks>
+				<birthAbsTicks>-85789730</birthAbsTicks>
+			</ageTracker>
+			<healthTracker>
+				<hediffSet>
+					<hediffs>
+						<li Class="HediffWithComps">
+							<loadID>140</loadID>
+							<def>CryptosleepSickness</def>
+							<ageTicks>322</ageTicks>
+							<severity>1</severity>
+							<visible>True</visible>
+							<combatLogEntry>null</combatLogEntry>
+							<ticksToDisappear>11074</ticksToDisappear>
+						</li>
+					</hediffs>
+				</hediffSet>
+				<surgeryBills>
+					<bills />
+				</surgeryBills>
+				<immunity>
+					<imList />
+				</immunity>
+			</healthTracker>
+			<records>
+				<records>
+					<vals>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>320</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+					</vals>
+				</records>
+				<storyRelevance>120</storyRelevance>
+				<battleActive>null</battleActive>
+			</records>
+			<inventory>
+				<itemsNotForSale />
+				<innerContainer>
+					<innerList />
+				</innerContainer>
+			</inventory>
+			<filth>
+				<carriedFilth />
+			</filth>
+			<needs>
+				<needs>
+					<li Class="Need_Mood">
+						<def>Mood</def>
+						<curLevel>0.5216</curLevel>
+						<thoughts>
+							<memories>
+								<memories>
+									<li Class="Thought_MemorySocial">
+										<def>CrashedTogether</def>
+										<otherPawn>Thing_Human653</otherPawn>
+										<age>450</age>
+										<opinionOffset>25</opinionOffset>
+									</li>
+									<li Class="Thought_MemorySocial">
+										<def>CrashedTogether</def>
+										<otherPawn>Thing_Human659</otherPawn>
+										<age>450</age>
+										<opinionOffset>25</opinionOffset>
+									</li>
+									<li>
+										<def>NewColonyOptimism</def>
+										<otherPawn>null</otherPawn>
+										<age>450</age>
+									</li>
+								</memories>
+							</memories>
+						</thoughts>
+						<recentMemory>
+							<lastLightTick>321</lastLightTick>
+							<lastOutdoorTick>318</lastOutdoorTick>
+						</recentMemory>
+					</li>
+					<li Class="Need_Food">
+						<def>Food</def>
+						<curLevel>0.788</curLevel>
+						<lastNonStarvingTick>318</lastNonStarvingTick>
+					</li>
+					<li Class="Need_Rest">
+						<def>Rest</def>
+						<curLevel>0.9516808</curLevel>
+					</li>
+					<li Class="Need_Joy">
+						<def>Joy</def>
+						<curLevel>0.5339416</curLevel>
+						<tolerances>
+							<vals>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+							</vals>
+						</tolerances>
+						<bored>
+							<vals>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+							</vals>
+						</bored>
+					</li>
+					<li Class="Need_Beauty">
+						<def>Beauty</def>
+						<curLevel>0.4952</curLevel>
+					</li>
+					<li Class="Need_Comfort">
+						<def>Comfort</def>
+						<curLevel>0.4928</curLevel>
+					</li>
+					<li Class="Need_Outdoors">
+						<def>Outdoors</def>
+						<curLevel>1</curLevel>
+					</li>
+					<li Class="Need_Chemical_Any">
+						<def>DrugDesire</def>
+						<curLevel>0.5</curLevel>
+					</li>
+					<li Class="Need_RoomSize">
+						<def>RoomSize</def>
+						<curLevel>0.6620001</curLevel>
+					</li>
+				</needs>
+			</needs>
+			<guest>
+				<hostFaction>null</hostFaction>
+				<interactionMode>NoInteraction</interactionMode>
+				<spotToWaitInsteadOfEscaping>(-1000, -1000, -1000)</spotToWaitInsteadOfEscaping>
+				<lastPrisonBreakTicks>-1</lastPrisonBreakTicks>
+			</guest>
+			<guilt />
+			<royalty>
+				<titles />
+				<favor>
+					<keys />
+					<values />
+				</favor>
+				<highestTitles>
+					<keys />
+					<values />
+				</highestTitles>
+				<heirs>
+					<keys />
+					<values />
+				</heirs>
+				<permitPoints>
+					<keys />
+					<values />
+				</permitPoints>
+				<permits />
+			</royalty>
+			<social>
+				<directRelations>
+					<li>
+						<def>Parent</def>
+						<otherPawn>Thing_Human659</otherPawn>
+					</li>
+				</directRelations>
+				<relativeInvolvedInRescueQuest>null</relativeInvolvedInRescueQuest>
+			</social>
+			<psychicEntropy>
+				<currentPsyfocus>0.75</currentPsyfocus>
+				<limitEntropyAmount>True</limitEntropyAmount>
+			</psychicEntropy>
+			<ownership>
+				<ownedBed>null</ownedBed>
+				<assignedMeditationSpot>null</assignedMeditationSpot>
+				<assignedGrave>null</assignedGrave>
+				<assignedThrone>null</assignedThrone>
+			</ownership>
+			<interactions />
+			<skills>
+				<skills>
+					<li>
+						<def>Shooting</def>
+						<xpSinceLastLevel>530.5381</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Melee</def>
+						<level>4</level>
+						<xpSinceLastLevel>3273.432</xpSinceLastLevel>
+						<passion>Minor</passion>
+					</li>
+					<li>
+						<def>Construction</def>
+						<level>2</level>
+						<xpSinceLastLevel>1083.609</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Mining</def>
+						<level>1</level>
+						<xpSinceLastLevel>414.5119</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Cooking</def>
+						<xpSinceLastLevel>574.215</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Plants</def>
+						<xpSinceLastLevel>676.4774</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Animals</def>
+						<level>4</level>
+						<xpSinceLastLevel>3792.744</xpSinceLastLevel>
+						<passion>Minor</passion>
+					</li>
+					<li>
+						<def>Crafting</def>
+						<level>1</level>
+						<xpSinceLastLevel>1490.836</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Artistic</def>
+						<level>10</level>
+						<xpSinceLastLevel>1567.568</xpSinceLastLevel>
+						<passion>Minor</passion>
+						<xpSinceMidnight>-0.2</xpSinceMidnight>
+					</li>
+					<li>
+						<def>Medicine</def>
+						<xpSinceLastLevel>187.9197</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Social</def>
+						<level>3</level>
+						<xpSinceLastLevel>604.4012</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Intellectual</def>
+						<level>2</level>
+						<xpSinceLastLevel>2616.385</xpSinceLastLevel>
+						<passion>Major</passion>
+					</li>
+				</skills>
+				<lastXpSinceMidnightResetTimestamp>-1</lastXpSinceMidnightResetTimestamp>
+			</skills>
+			<abilities>
+				<abilities />
+			</abilities>
+			<workSettings>
+				<priorities>
+					<vals>
+						<li>0</li>
+						<li>3</li>
+						<li>0</li>
+						<li>3</li>
+						<li>3</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>3</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>3</li>
+						<li>0</li>
+						<li>3</li>
+						<li>3</li>
+						<li>0</li>
+					</vals>
+				</priorities>
+			</workSettings>
+			<trader IsNull="True" />
+			<outfits>
+				<curOutfit>Outfit_Anything1</curOutfit>
+				<overrideHandler>
+					<forcedAps />
+				</overrideHandler>
+			</outfits>
+			<drugs>
+				<curAssignedDrugs>DrugPolicy_Social drugs1</curAssignedDrugs>
+				<drugTakeRecords />
+			</drugs>
+			<foodRestriction>
+				<curRestriction>null</curRestriction>
+			</foodRestriction>
+			<timetable>
+				<times>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+				</times>
+			</timetable>
+			<playerSettings>
+				<medCare>Best</medCare>
+				<areaAllowed>null</areaAllowed>
+				<master>null</master>
+			</playerSettings>
+			<training IsNull="True" />
+		</li>
+		<li>
+			<def>Human</def>
+			<id>Human659</id>
+			<map>0</map>
+			<pos>(123, 0, 126)</pos>
+			<rot>2</rot>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<kindDef>Colonist</kindDef>
+			<name Class="NameTriple">
+				<first>Nikolay</first>
+				<nick>Nikolay</nick>
+				<last>Pennington</last>
+			</name>
+			<mindState>
+				<meleeThreat>null</meleeThreat>
+				<enemyTarget>null</enemyTarget>
+				<knownExploder>null</knownExploder>
+				<lastMannedThing>null</lastMannedThing>
+				<lastAttackedTarget>(0, 0, 0)</lastAttackedTarget>
+				<thinkData>
+					<keys />
+					<values />
+				</thinkData>
+				<lastJobTag>Idle</lastJobTag>
+				<nextApparelOptimizeTick>8276</nextApparelOptimizeTick>
+				<lastEngageTargetTick>-99999</lastEngageTargetTick>
+				<lastAttackTargetTick>-99999</lastAttackTargetTick>
+				<canFleeIndividual>True</canFleeIndividual>
+				<lastMeleeThreatHarmTick>-99999</lastMeleeThreatHarmTick>
+				<nextMoveOrderIsWait>False</nextMoveOrderIsWait>
+				<duty IsNull="True" />
+				<mentalStateHandler>
+					<curState IsNull="True" />
+				</mentalStateHandler>
+				<mentalBreaker />
+				<inspirationHandler>
+					<curState IsNull="True" />
+				</inspirationHandler>
+				<priorityWork>
+					<prioritizedCell>(-1000, -1000, -1000)</prioritizedCell>
+				</priorityWork>
+				<lastSelfTendTick>-99999</lastSelfTendTick>
+			</mindState>
+			<jobs>
+				<curJob>
+					<commTarget>null</commTarget>
+					<verbToUse>null</verbToUse>
+					<bill>null</bill>
+					<lord>null</lord>
+					<quest>null</quest>
+					<def>Wait_Wander</def>
+					<loadID>138</loadID>
+					<targetQueueA IsNull="True" />
+					<targetQueueB IsNull="True" />
+					<countQueue IsNull="True" />
+					<startTick>306</startTick>
+					<expiryInterval>199</expiryInterval>
+					<placedThings IsNull="True" />
+					<jobGiverThinkTree>Humanlike</jobGiverThinkTree>
+					<psyfocusTargetLast>-1</psyfocusTargetLast>
+					<ability>null</ability>
+					<lastJobGiverKey>-1781508684</lastJobGiverKey>
+				</curJob>
+				<curDriver Class="JobDriver_Wait">
+					<curToilIndex>0</curToilIndex>
+					<ticksLeftThisToil>-16</ticksLeftThisToil>
+					<curToilCompleteMode>Never</curToilCompleteMode>
+					<startTick>306</startTick>
+					<locomotionUrgencySameAs>null</locomotionUrgencySameAs>
+				</curDriver>
+				<jobQueue>
+					<jobs />
+				</jobQueue>
+			</jobs>
+			<stances>
+				<staggerUntilTick>-1</staggerUntilTick>
+				<stunner>
+					<showStunMote>True</showStunMote>
+				</stunner>
+				<curStance Class="Stance_Mobile" />
+			</stances>
+			<verbTracker>
+				<verbs IsNull="True" />
+			</verbTracker>
+			<natives>
+				<verbTracker>
+					<verbs IsNull="True" />
+				</verbTracker>
+			</natives>
+			<meleeVerbs>
+				<curMeleeVerb>null</curMeleeVerb>
+				<terrainVerbs IsNull="True" />
+			</meleeVerbs>
+			<rotationTracker />
+			<pather>
+				<moving>False</moving>
+				<nextCell>(123, 0, 126)</nextCell>
+				<nextCellCostInitial>54</nextCellCostInitial>
+				<peMode>OnCell</peMode>
+				<cellsUntilClamor>11</cellsUntilClamor>
+				<lastMovedTick>322</lastMovedTick>
+			</pather>
+			<carryTracker>
+				<innerContainer>
+					<maxStacks>1</maxStacks>
+					<innerList />
+				</innerContainer>
+			</carryTracker>
+			<apparel>
+				<wornApparel>
+					<innerList>
+						<li>
+							<def>Apparel_BasicShirt</def>
+							<id>Apparel_BasicShirt660</id>
+							<health>130</health>
+							<stackCount>1</stackCount>
+							<stuff>Synthread</stuff>
+							<questTags IsNull="True" />
+							<quality>Normal</quality>
+						</li>
+						<li>
+							<def>Apparel_Pants</def>
+							<id>Apparel_Pants661</id>
+							<health>130</health>
+							<stackCount>1</stackCount>
+							<stuff>Synthread</stuff>
+							<questTags IsNull="True" />
+							<quality>Normal</quality>
+						</li>
+					</innerList>
+				</wornApparel>
+				<lockedApparel />
+				<lastApparelWearoutTick>250</lastApparelWearoutTick>
+			</apparel>
+			<story>
+				<childhood>SicklyChild55</childhood>
+				<adulthood>Evangelist39</adulthood>
+				<bodyType>Male</bodyType>
+				<crownType>Narrow</crownType>
+				<headGraphicPath>Things/Pawn/Humanlike/Heads/Male/Male_Narrow_Pointy</headGraphicPath>
+				<hairDef>Afro</hairDef>
+				<hairColor>RGBA(0.250, 0.200, 0.150, 1.000)</hairColor>
+				<melanin>0.4225747</melanin>
+				<traits>
+					<allTraits>
+						<li>
+							<def>Psychopath</def>
+						</li>
+						<li>
+							<def>DislikesWomen</def>
+						</li>
+						<li>
+							<def>TooSmart</def>
+						</li>
+					</allTraits>
+				</traits>
+				<birthLastName>Pennington</birthLastName>
+			</story>
+			<equipment>
+				<equipment>
+					<innerList />
+				</equipment>
+				<bondedWeapon>null</bondedWeapon>
+			</equipment>
+			<drafter>
+				<autoUndrafter />
+			</drafter>
+			<ageTracker>
+				<ageBiologicalTicks>187377691</ageBiologicalTicks>
+				<birthAbsTicks>-302577370</birthAbsTicks>
+			</ageTracker>
+			<healthTracker>
+				<hediffSet>
+					<hediffs />
+				</hediffSet>
+				<surgeryBills>
+					<bills />
+				</surgeryBills>
+				<immunity>
+					<imList />
+				</immunity>
+			</healthTracker>
+			<records>
+				<records>
+					<vals>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>320</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+					</vals>
+				</records>
+				<storyRelevance>120</storyRelevance>
+				<battleActive>null</battleActive>
+			</records>
+			<inventory>
+				<itemsNotForSale />
+				<innerContainer>
+					<innerList />
+				</innerContainer>
+			</inventory>
+			<filth>
+				<lastTerrainFilthDef>Filth_Dirt</lastTerrainFilthDef>
+				<carriedFilth>
+					<li>
+						<def>Filth_Dirt</def>
+						<id>Filth_Dirt40009</id>
+						<questTags IsNull="True" />
+					</li>
+				</carriedFilth>
+			</filth>
+			<needs>
+				<needs>
+					<li Class="Need_Mood">
+						<def>Mood</def>
+						<curLevel>0.5216</curLevel>
+						<thoughts>
+							<memories>
+								<memories>
+									<li Class="Thought_MemorySocial">
+										<def>CrashedTogether</def>
+										<otherPawn>Thing_Human653</otherPawn>
+										<age>450</age>
+										<opinionOffset>25</opinionOffset>
+									</li>
+									<li Class="Thought_MemorySocial">
+										<def>CrashedTogether</def>
+										<otherPawn>Thing_Human656</otherPawn>
+										<age>450</age>
+										<opinionOffset>25</opinionOffset>
+									</li>
+									<li>
+										<def>NewColonyOptimism</def>
+										<otherPawn>null</otherPawn>
+										<age>450</age>
+									</li>
+								</memories>
+							</memories>
+						</thoughts>
+						<recentMemory>
+							<lastLightTick>321</lastLightTick>
+							<lastOutdoorTick>321</lastOutdoorTick>
+						</recentMemory>
+					</li>
+					<li Class="Need_Food">
+						<def>Food</def>
+						<curLevel>0.788</curLevel>
+						<lastNonStarvingTick>321</lastNonStarvingTick>
+					</li>
+					<li Class="Need_Rest">
+						<def>Rest</def>
+						<curLevel>0.9385471</curLevel>
+					</li>
+					<li Class="Need_Joy">
+						<def>Joy</def>
+						<curLevel>0.556214</curLevel>
+						<tolerances>
+							<vals>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+							</vals>
+						</tolerances>
+						<bored>
+							<vals>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+							</vals>
+						</bored>
+					</li>
+					<li Class="Need_Beauty">
+						<def>Beauty</def>
+						<curLevel>0.4952</curLevel>
+					</li>
+					<li Class="Need_Comfort">
+						<def>Comfort</def>
+						<curLevel>0.4928</curLevel>
+					</li>
+					<li Class="Need_Outdoors">
+						<def>Outdoors</def>
+						<curLevel>1</curLevel>
+					</li>
+					<li Class="Need_Chemical_Any">
+						<def>DrugDesire</def>
+						<curLevel>0.5</curLevel>
+					</li>
+					<li Class="Need_RoomSize">
+						<def>RoomSize</def>
+						<curLevel>0.6620001</curLevel>
+					</li>
+				</needs>
+			</needs>
+			<guest>
+				<hostFaction>null</hostFaction>
+				<interactionMode>NoInteraction</interactionMode>
+				<spotToWaitInsteadOfEscaping>(-1000, -1000, -1000)</spotToWaitInsteadOfEscaping>
+				<lastPrisonBreakTicks>-1</lastPrisonBreakTicks>
+			</guest>
+			<guilt />
+			<royalty>
+				<titles />
+				<favor>
+					<keys />
+					<values />
+				</favor>
+				<highestTitles>
+					<keys />
+					<values />
+				</highestTitles>
+				<heirs>
+					<keys />
+					<values />
+				</heirs>
+				<permitPoints>
+					<keys />
+					<values />
+				</permitPoints>
+				<permits />
+			</royalty>
+			<social>
+				<directRelations>
+					<li>
+						<def>Parent</def>
+						<otherPawn>Thing_Human662</otherPawn>
+					</li>
+				</directRelations>
+				<relativeInvolvedInRescueQuest>null</relativeInvolvedInRescueQuest>
+			</social>
+			<psychicEntropy>
+				<currentPsyfocus>0.75</currentPsyfocus>
+				<limitEntropyAmount>True</limitEntropyAmount>
+			</psychicEntropy>
+			<ownership>
+				<ownedBed>null</ownedBed>
+				<assignedMeditationSpot>null</assignedMeditationSpot>
+				<assignedGrave>null</assignedGrave>
+				<assignedThrone>null</assignedThrone>
+			</ownership>
+			<interactions />
+			<skills>
+				<skills>
+					<li>
+						<def>Shooting</def>
+						<level>1</level>
+						<xpSinceLastLevel>792.907</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Melee</def>
+						<level>2</level>
+						<xpSinceLastLevel>1917.294</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Construction</def>
+						<xpSinceLastLevel>811.2137</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Mining</def>
+						<level>1</level>
+						<xpSinceLastLevel>204.7318</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Cooking</def>
+						<xpSinceLastLevel>844.0526</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Plants</def>
+						<level>1</level>
+						<xpSinceLastLevel>1080.51</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Animals</def>
+						<level>2</level>
+						<xpSinceLastLevel>1055.286</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Crafting</def>
+						<level>5</level>
+						<xpSinceLastLevel>2636.863</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Artistic</def>
+						<level>6</level>
+						<xpSinceLastLevel>5937.999</xpSinceLastLevel>
+						<passion>Major</passion>
+					</li>
+					<li>
+						<def>Medicine</def>
+						<level>8</level>
+						<xpSinceLastLevel>7159.867</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Social</def>
+						<level>4</level>
+						<xpSinceLastLevel>2537.767</xpSinceLastLevel>
+						<passion>Minor</passion>
+					</li>
+					<li>
+						<def>Intellectual</def>
+						<level>7</level>
+						<xpSinceLastLevel>6780.771</xpSinceLastLevel>
+						<passion>Minor</passion>
+					</li>
+				</skills>
+				<lastXpSinceMidnightResetTimestamp>-1</lastXpSinceMidnightResetTimestamp>
+			</skills>
+			<abilities>
+				<abilities />
+			</abilities>
+			<workSettings>
+				<priorities>
+					<vals>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+					</vals>
+				</priorities>
+			</workSettings>
+			<trader IsNull="True" />
+			<outfits>
+				<curOutfit>Outfit_Anything1</curOutfit>
+				<overrideHandler>
+					<forcedAps />
+				</overrideHandler>
+			</outfits>
+			<drugs>
+				<curAssignedDrugs>DrugPolicy_Social drugs1</curAssignedDrugs>
+				<drugTakeRecords />
+			</drugs>
+			<foodRestriction>
+				<curRestriction>null</curRestriction>
+			</foodRestriction>
+			<timetable>
+				<times>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+				</times>
+			</timetable>
+			<playerSettings>
+				<medCare>Best</medCare>
+				<areaAllowed>null</areaAllowed>
+				<master>null</master>
+			</playerSettings>
+			<training IsNull="True" />
+		</li>
+		<li>
+			<def>Human</def>
+			<id>Human653</id>
+			<map>0</map>
+			<pos>(125, 0, 127)</pos>
+			<rot>3</rot>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<kindDef>Colonist</kindDef>
+			<gender>Female</gender>
+			<name Class="NameTriple">
+				<first>Aika</first>
+				<nick>Nina</nick>
+				<last>Tears</last>
+			</name>
+			<mindState>
+				<meleeThreat>null</meleeThreat>
+				<enemyTarget>null</enemyTarget>
+				<knownExploder>null</knownExploder>
+				<lastMannedThing>null</lastMannedThing>
+				<lastAttackedTarget>(0, 0, 0)</lastAttackedTarget>
+				<thinkData>
+					<keys />
+					<values />
+				</thinkData>
+				<lastJobTag>Idle</lastJobTag>
+				<nextApparelOptimizeTick>8425</nextApparelOptimizeTick>
+				<lastEngageTargetTick>-99999</lastEngageTargetTick>
+				<lastAttackTargetTick>-99999</lastAttackTargetTick>
+				<canFleeIndividual>True</canFleeIndividual>
+				<lastMeleeThreatHarmTick>-99999</lastMeleeThreatHarmTick>
+				<duty IsNull="True" />
+				<mentalStateHandler>
+					<curState IsNull="True" />
+				</mentalStateHandler>
+				<mentalBreaker />
+				<inspirationHandler>
+					<curState IsNull="True" />
+				</inspirationHandler>
+				<priorityWork>
+					<prioritizedCell>(-1000, -1000, -1000)</prioritizedCell>
+				</priorityWork>
+				<lastSelfTendTick>-99999</lastSelfTendTick>
+			</mindState>
+			<jobs>
+				<curJob>
+					<commTarget>null</commTarget>
+					<verbToUse>null</verbToUse>
+					<bill>null</bill>
+					<lord>null</lord>
+					<quest>null</quest>
+					<def>GotoWander</def>
+					<loadID>136</loadID>
+					<targetA>(122, 0, 129)</targetA>
+					<targetQueueA IsNull="True" />
+					<targetQueueB IsNull="True" />
+					<countQueue IsNull="True" />
+					<startTick>300</startTick>
+					<checkOverrideOnExpire>True</checkOverrideOnExpire>
+					<placedThings IsNull="True" />
+					<locomotionUrgency>Walk</locomotionUrgency>
+					<jobGiverThinkTree>Humanlike</jobGiverThinkTree>
+					<psyfocusTargetLast>-1</psyfocusTargetLast>
+					<ability>null</ability>
+					<lastJobGiverKey>-1781508684</lastJobGiverKey>
+				</curJob>
+				<curDriver Class="JobDriver_Goto">
+					<curToilIndex>0</curToilIndex>
+					<ticksLeftThisToil>-22</ticksLeftThisToil>
+					<curToilCompleteMode>PatherArrival</curToilCompleteMode>
+					<startTick>300</startTick>
+					<locomotionUrgencySameAs>null</locomotionUrgencySameAs>
+				</curDriver>
+				<jobQueue>
+					<jobs />
+				</jobQueue>
+			</jobs>
+			<stances>
+				<staggerUntilTick>-1</staggerUntilTick>
+				<stunner>
+					<showStunMote>True</showStunMote>
+				</stunner>
+				<curStance Class="Stance_Mobile" />
+			</stances>
+			<verbTracker>
+				<verbs IsNull="True" />
+			</verbTracker>
+			<natives>
+				<verbTracker>
+					<verbs IsNull="True" />
+				</verbTracker>
+			</natives>
+			<meleeVerbs>
+				<curMeleeVerb>null</curMeleeVerb>
+				<terrainVerbs IsNull="True" />
+			</meleeVerbs>
+			<rotationTracker />
+			<pather>
+				<nextCell>(124, 0, 127)</nextCell>
+				<nextCellCostLeft>37</nextCellCostLeft>
+				<nextCellCostInitial>58</nextCellCostInitial>
+				<peMode>OnCell</peMode>
+				<cellsUntilClamor>12</cellsUntilClamor>
+				<lastMovedTick>322</lastMovedTick>
+				<destination>(122, 0, 129)</destination>
+			</pather>
+			<carryTracker>
+				<innerContainer>
+					<maxStacks>1</maxStacks>
+					<innerList />
+				</innerContainer>
+			</carryTracker>
+			<apparel>
+				<wornApparel>
+					<innerList>
+						<li>
+							<def>Apparel_Pants</def>
+							<id>Apparel_Pants654</id>
+							<health>130</health>
+							<stackCount>1</stackCount>
+							<stuff>Synthread</stuff>
+							<questTags IsNull="True" />
+							<quality>Normal</quality>
+						</li>
+						<li>
+							<def>Apparel_CollarShirt</def>
+							<id>Apparel_CollarShirt655</id>
+							<health>130</health>
+							<stackCount>1</stackCount>
+							<stuff>Synthread</stuff>
+							<questTags IsNull="True" />
+							<quality>Normal</quality>
+						</li>
+					</innerList>
+				</wornApparel>
+				<lockedApparel />
+				<lastApparelWearoutTick>250</lastApparelWearoutTick>
+			</apparel>
+			<story>
+				<childhood>SicklyChild55</childhood>
+				<adulthood>Teacher20</adulthood>
+				<bodyType>Female</bodyType>
+				<crownType>Average</crownType>
+				<headGraphicPath>Things/Pawn/Humanlike/Heads/Female/Female_Average_Normal</headGraphicPath>
+				<hairDef>Elisabeth</hairDef>
+				<hairColor>RGBA(0.300, 0.200, 0.100, 1.000)</hairColor>
+				<melanin>0.4243301</melanin>
+				<traits>
+					<allTraits>
+						<li>
+							<def>Nimble</def>
+						</li>
+						<li>
+							<def>Industriousness</def>
+							<degree>1</degree>
+						</li>
+						<li>
+							<def>Jealous</def>
+						</li>
+					</allTraits>
+				</traits>
+				<birthLastName>Tears</birthLastName>
+			</story>
+			<equipment>
+				<equipment>
+					<innerList />
+				</equipment>
+				<bondedWeapon>null</bondedWeapon>
+			</equipment>
+			<drafter>
+				<autoUndrafter />
+			</drafter>
+			<ageTracker>
+				<ageBiologicalTicks>170821340</ageBiologicalTicks>
+				<birthAbsTicks>-178021019</birthAbsTicks>
+			</ageTracker>
+			<healthTracker>
+				<hediffSet>
+					<hediffs>
+						<li Class="Hediff_Injury">
+							<loadID>73</loadID>
+							<def>Scratch</def>
+							<ageTicks>322</ageTicks>
+							<part>
+								<body>Human</body>
+								<index>54</index>
+							</part>
+							<severity>5</severity>
+							<visible>True</visible>
+							<combatLogEntry>null</combatLogEntry>
+							<infectionChanceFactor>1</infectionChanceFactor>
+							<isPermanent>True</isPermanent>
+							<painCategory>LowPain</painCategory>
+						</li>
+						<li Class="Hediff_Injury">
+							<loadID>74</loadID>
+							<def>Stab</def>
+							<ageTicks>322</ageTicks>
+							<part>
+								<body>Human</body>
+								<index>0</index>
+							</part>
+							<severity>2</severity>
+							<visible>True</visible>
+							<combatLogEntry>null</combatLogEntry>
+							<infectionChanceFactor>1</infectionChanceFactor>
+							<isPermanent>True</isPermanent>
+							<painCategory>LowPain</painCategory>
+						</li>
+						<li Class="Hediff_Injury">
+							<loadID>75</loadID>
+							<def>Scratch</def>
+							<ageTicks>322</ageTicks>
+							<part>
+								<body>Human</body>
+								<index>45</index>
+							</part>
+							<severity>2</severity>
+							<visible>True</visible>
+							<combatLogEntry>null</combatLogEntry>
+							<infectionChanceFactor>1</infectionChanceFactor>
+							<isPermanent>True</isPermanent>
+						</li>
+					</hediffs>
+				</hediffSet>
+				<surgeryBills>
+					<bills />
+				</surgeryBills>
+				<immunity>
+					<imList />
+				</immunity>
+			</healthTracker>
+			<records>
+				<records>
+					<vals>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>320</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+					</vals>
+				</records>
+				<storyRelevance>120</storyRelevance>
+				<battleActive>null</battleActive>
+			</records>
+			<inventory>
+				<itemsNotForSale />
+				<innerContainer>
+					<innerList />
+				</innerContainer>
+			</inventory>
+			<filth>
+				<carriedFilth />
+			</filth>
+			<needs>
+				<needs>
+					<li Class="Need_Mood">
+						<def>Mood</def>
+						<curLevel>0.5216</curLevel>
+						<thoughts>
+							<memories>
+								<memories>
+									<li Class="Thought_MemorySocial">
+										<def>CrashedTogether</def>
+										<otherPawn>Thing_Human656</otherPawn>
+										<age>450</age>
+										<opinionOffset>25</opinionOffset>
+									</li>
+									<li Class="Thought_MemorySocial">
+										<def>CrashedTogether</def>
+										<otherPawn>Thing_Human659</otherPawn>
+										<age>450</age>
+										<opinionOffset>25</opinionOffset>
+									</li>
+									<li>
+										<def>NewColonyOptimism</def>
+										<otherPawn>null</otherPawn>
+										<age>450</age>
+									</li>
+								</memories>
+							</memories>
+						</thoughts>
+						<recentMemory>
+							<lastLightTick>321</lastLightTick>
+							<lastOutdoorTick>308</lastOutdoorTick>
+						</recentMemory>
+					</li>
+					<li Class="Need_Food">
+						<def>Food</def>
+						<curLevel>0.788</curLevel>
+						<lastNonStarvingTick>308</lastNonStarvingTick>
+					</li>
+					<li Class="Need_Rest">
+						<def>Rest</def>
+						<curLevel>0.9314281</curLevel>
+					</li>
+					<li Class="Need_Joy">
+						<def>Joy</def>
+						<curLevel>0.5356792</curLevel>
+						<tolerances>
+							<vals>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+								<li>0</li>
+							</vals>
+						</tolerances>
+						<bored>
+							<vals>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+								<li>False</li>
+							</vals>
+						</bored>
+					</li>
+					<li Class="Need_Beauty">
+						<def>Beauty</def>
+						<curLevel>0.4952</curLevel>
+					</li>
+					<li Class="Need_Comfort">
+						<def>Comfort</def>
+						<curLevel>0.4928</curLevel>
+					</li>
+					<li Class="Need_Outdoors">
+						<def>Outdoors</def>
+						<curLevel>1</curLevel>
+					</li>
+					<li Class="Need_Chemical_Any">
+						<def>DrugDesire</def>
+						<curLevel>0.5</curLevel>
+					</li>
+					<li Class="Need_RoomSize">
+						<def>RoomSize</def>
+						<curLevel>0.6620001</curLevel>
+					</li>
+				</needs>
+			</needs>
+			<guest>
+				<hostFaction>null</hostFaction>
+				<interactionMode>NoInteraction</interactionMode>
+				<spotToWaitInsteadOfEscaping>(-1000, -1000, -1000)</spotToWaitInsteadOfEscaping>
+				<lastPrisonBreakTicks>-1</lastPrisonBreakTicks>
+			</guest>
+			<guilt />
+			<royalty>
+				<titles />
+				<favor>
+					<keys />
+					<values />
+				</favor>
+				<highestTitles>
+					<keys />
+					<values />
+				</highestTitles>
+				<heirs>
+					<keys />
+					<values />
+				</heirs>
+				<permitPoints>
+					<keys />
+					<values />
+				</permitPoints>
+				<permits />
+			</royalty>
+			<social>
+				<directRelations />
+				<relativeInvolvedInRescueQuest>null</relativeInvolvedInRescueQuest>
+			</social>
+			<psychicEntropy>
+				<currentPsyfocus>0.75</currentPsyfocus>
+				<limitEntropyAmount>True</limitEntropyAmount>
+			</psychicEntropy>
+			<ownership>
+				<ownedBed>null</ownedBed>
+				<assignedMeditationSpot>null</assignedMeditationSpot>
+				<assignedGrave>null</assignedGrave>
+				<assignedThrone>null</assignedThrone>
+			</ownership>
+			<interactions />
+			<skills>
+				<skills>
+					<li>
+						<def>Shooting</def>
+						<level>5</level>
+						<xpSinceLastLevel>1825.005</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Melee</def>
+						<xpSinceLastLevel>867.8757</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Construction</def>
+						<xpSinceLastLevel>402.5522</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Mining</def>
+						<level>5</level>
+						<xpSinceLastLevel>4068.201</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Cooking</def>
+						<level>4</level>
+						<xpSinceLastLevel>4244.067</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Plants</def>
+						<level>4</level>
+						<xpSinceLastLevel>3534.341</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Animals</def>
+						<level>5</level>
+						<xpSinceLastLevel>4568.927</xpSinceLastLevel>
+						<passion>Minor</passion>
+					</li>
+					<li>
+						<def>Crafting</def>
+						<level>1</level>
+						<xpSinceLastLevel>1494.483</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Artistic</def>
+						<level>3</level>
+						<xpSinceLastLevel>2428.933</xpSinceLastLevel>
+					</li>
+					<li>
+						<def>Medicine</def>
+						<level>9</level>
+						<xpSinceLastLevel>4924.119</xpSinceLastLevel>
+						<passion>Minor</passion>
+					</li>
+					<li>
+						<def>Social</def>
+						<level>3</level>
+						<xpSinceLastLevel>3404.908</xpSinceLastLevel>
+						<passion>Major</passion>
+					</li>
+					<li>
+						<def>Intellectual</def>
+						<level>11</level>
+						<xpSinceLastLevel>4320.61</xpSinceLastLevel>
+						<passion>Minor</passion>
+						<xpSinceMidnight>-0.4</xpSinceMidnight>
+					</li>
+				</skills>
+				<lastXpSinceMidnightResetTimestamp>-1</lastXpSinceMidnightResetTimestamp>
+			</skills>
+			<abilities>
+				<abilities />
+			</abilities>
+			<workSettings>
+				<priorities>
+					<vals>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>0</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>0</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>0</li>
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+					</vals>
+				</priorities>
+			</workSettings>
+			<trader IsNull="True" />
+			<outfits>
+				<curOutfit>Outfit_Anything1</curOutfit>
+				<overrideHandler>
+					<forcedAps />
+				</overrideHandler>
+			</outfits>
+			<drugs>
+				<curAssignedDrugs>DrugPolicy_Social drugs1</curAssignedDrugs>
+				<drugTakeRecords />
+			</drugs>
+			<foodRestriction>
+				<curRestriction>null</curRestriction>
+			</foodRestriction>
+			<timetable>
+				<times>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Anything</li>
+					<li>Sleep</li>
+					<li>Sleep</li>
+				</times>
+			</timetable>
+			<playerSettings>
+				<medCare>Best</medCare>
+				<areaAllowed>null</areaAllowed>
+				<master>null</master>
+			</playerSettings>
+			<training IsNull="True" />
+		</li>
+	</Pawns>
+	<Buildings>
+		<li>
+			<def>Wall</def>
+			<id>Wall40011</id>
+			<map>0</map>
+			<pos>(109, 0, 132)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40012</id>
+			<map>0</map>
+			<pos>(109, 0, 133)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40013</id>
+			<map>0</map>
+			<pos>(109, 0, 134)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40014</id>
+			<map>0</map>
+			<pos>(109, 0, 135)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40015</id>
+			<map>0</map>
+			<pos>(109, 0, 136)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40016</id>
+			<map>0</map>
+			<pos>(109, 0, 137)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40017</id>
+			<map>0</map>
+			<pos>(109, 0, 138)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40018</id>
+			<map>0</map>
+			<pos>(109, 0, 139)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40019</id>
+			<map>0</map>
+			<pos>(109, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40020</id>
+			<map>0</map>
+			<pos>(109, 0, 141)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40021</id>
+			<map>0</map>
+			<pos>(109, 0, 142)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40022</id>
+			<map>0</map>
+			<pos>(109, 0, 143)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40023</id>
+			<map>0</map>
+			<pos>(109, 0, 144)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40024</id>
+			<map>0</map>
+			<pos>(109, 0, 145)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40025</id>
+			<map>0</map>
+			<pos>(109, 0, 146)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40026</id>
+			<map>0</map>
+			<pos>(109, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40027</id>
+			<map>0</map>
+			<pos>(110, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40028</id>
+			<map>0</map>
+			<pos>(111, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40029</id>
+			<map>0</map>
+			<pos>(112, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40030</id>
+			<map>0</map>
+			<pos>(113, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40031</id>
+			<map>0</map>
+			<pos>(114, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40032</id>
+			<map>0</map>
+			<pos>(115, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40033</id>
+			<map>0</map>
+			<pos>(116, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40034</id>
+			<map>0</map>
+			<pos>(117, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40035</id>
+			<map>0</map>
+			<pos>(118, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40036</id>
+			<map>0</map>
+			<pos>(119, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40037</id>
+			<map>0</map>
+			<pos>(120, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40038</id>
+			<map>0</map>
+			<pos>(121, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40039</id>
+			<map>0</map>
+			<pos>(121, 0, 142)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40040</id>
+			<map>0</map>
+			<pos>(121, 0, 143)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40041</id>
+			<map>0</map>
+			<pos>(121, 0, 144)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40042</id>
+			<map>0</map>
+			<pos>(121, 0, 145)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40043</id>
+			<map>0</map>
+			<pos>(121, 0, 146)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40044</id>
+			<map>0</map>
+			<pos>(113, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40045</id>
+			<map>0</map>
+			<pos>(114, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40046</id>
+			<map>0</map>
+			<pos>(115, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40047</id>
+			<map>0</map>
+			<pos>(116, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40048</id>
+			<map>0</map>
+			<pos>(117, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40049</id>
+			<map>0</map>
+			<pos>(118, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40050</id>
+			<map>0</map>
+			<pos>(119, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40051</id>
+			<map>0</map>
+			<pos>(120, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40052</id>
+			<map>0</map>
+			<pos>(113, 0, 135)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40053</id>
+			<map>0</map>
+			<pos>(114, 0, 135)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40054</id>
+			<map>0</map>
+			<pos>(115, 0, 135)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40055</id>
+			<map>0</map>
+			<pos>(116, 0, 135)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40056</id>
+			<map>0</map>
+			<pos>(117, 0, 135)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40057</id>
+			<map>0</map>
+			<pos>(118, 0, 135)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40058</id>
+			<map>0</map>
+			<pos>(119, 0, 135)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40059</id>
+			<map>0</map>
+			<pos>(113, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40060</id>
+			<map>0</map>
+			<pos>(114, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40061</id>
+			<map>0</map>
+			<pos>(115, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40062</id>
+			<map>0</map>
+			<pos>(116, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40063</id>
+			<map>0</map>
+			<pos>(117, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40064</id>
+			<map>0</map>
+			<pos>(118, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40065</id>
+			<map>0</map>
+			<pos>(119, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40066</id>
+			<map>0</map>
+			<pos>(120, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40067</id>
+			<map>0</map>
+			<pos>(121, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40068</id>
+			<map>0</map>
+			<pos>(124, 0, 131)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40069</id>
+			<map>0</map>
+			<pos>(124, 0, 132)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40070</id>
+			<map>0</map>
+			<pos>(124, 0, 133)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40071</id>
+			<map>0</map>
+			<pos>(124, 0, 134)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40072</id>
+			<map>0</map>
+			<pos>(124, 0, 135)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40073</id>
+			<map>0</map>
+			<pos>(124, 0, 136)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40074</id>
+			<map>0</map>
+			<pos>(124, 0, 137)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40075</id>
+			<map>0</map>
+			<pos>(124, 0, 138)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40076</id>
+			<map>0</map>
+			<pos>(124, 0, 139)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40077</id>
+			<map>0</map>
+			<pos>(124, 0, 140)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40078</id>
+			<map>0</map>
+			<pos>(124, 0, 141)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40079</id>
+			<map>0</map>
+			<pos>(124, 0, 142)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40080</id>
+			<map>0</map>
+			<pos>(124, 0, 143)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40081</id>
+			<map>0</map>
+			<pos>(124, 0, 144)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40082</id>
+			<map>0</map>
+			<pos>(124, 0, 145)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40083</id>
+			<map>0</map>
+			<pos>(124, 0, 146)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40084</id>
+			<map>0</map>
+			<pos>(124, 0, 147)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40085</id>
+			<map>0</map>
+			<pos>(124, 0, 148)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+		<li>
+			<def>Wall</def>
+			<id>Wall40086</id>
+			<map>0</map>
+			<pos>(124, 0, 149)</pos>
+			<health>195</health>
+			<stuff>WoodLog</stuff>
+			<faction>Faction_23</faction>
+			<questTags IsNull="True" />
+			<lastUser>null</lastUser>
+		</li>
+	</Buildings>
+	<Things />
+	<Plants />
+	<Terrains>
+		<keys>
+			<li>(84, 0, 20)</li>
+			<li>(237, 0, 20)</li>
+			<li>(238, 0, 20)</li>
+			<li>(239, 0, 20)</li>
+			<li>(84, 0, 21)</li>
+			<li>(86, 0, 21)</li>
+			<li>(238, 0, 21)</li>
+			<li>(239, 0, 21)</li>
+			<li>(81, 0, 22)</li>
+			<li>(238, 0, 22)</li>
+			<li>(239, 0, 22)</li>
+			<li>(81, 0, 23)</li>
+			<li>(84, 0, 23)</li>
+			<li>(85, 0, 23)</li>
+			<li>(87, 0, 23)</li>
+			<li>(235, 0, 23)</li>
+			<li>(236, 0, 23)</li>
+			<li>(237, 0, 23)</li>
+			<li>(238, 0, 23)</li>
+			<li>(239, 0, 23)</li>
+			<li>(83, 0, 24)</li>
+			<li>(84, 0, 24)</li>
+			<li>(235, 0, 24)</li>
+			<li>(236, 0, 24)</li>
+			<li>(237, 0, 24)</li>
+			<li>(238, 0, 24)</li>
+			<li>(239, 0, 24)</li>
+			<li>(82, 0, 25)</li>
+			<li>(83, 0, 25)</li>
+			<li>(84, 0, 25)</li>
+			<li>(85, 0, 25)</li>
+			<li>(235, 0, 25)</li>
+			<li>(236, 0, 25)</li>
+			<li>(237, 0, 25)</li>
+			<li>(238, 0, 25)</li>
+			<li>(239, 0, 25)</li>
+			<li>(82, 0, 26)</li>
+			<li>(85, 0, 26)</li>
+			<li>(87, 0, 26)</li>
+			<li>(234, 0, 26)</li>
+			<li>(238, 0, 26)</li>
+			<li>(239, 0, 26)</li>
+			<li>(81, 0, 27)</li>
+			<li>(82, 0, 27)</li>
+			<li>(83, 0, 27)</li>
+			<li>(85, 0, 27)</li>
+			<li>(86, 0, 27)</li>
+			<li>(87, 0, 27)</li>
+			<li>(235, 0, 27)</li>
+			<li>(236, 0, 27)</li>
+			<li>(238, 0, 27)</li>
+			<li>(82, 0, 28)</li>
+			<li>(83, 0, 28)</li>
+			<li>(84, 0, 28)</li>
+			<li>(85, 0, 28)</li>
+			<li>(86, 0, 28)</li>
+			<li>(87, 0, 28)</li>
+			<li>(88, 0, 28)</li>
+			<li>(236, 0, 28)</li>
+			<li>(237, 0, 28)</li>
+			<li>(238, 0, 28)</li>
+			<li>(239, 0, 28)</li>
+			<li>(58, 0, 29)</li>
+			<li>(60, 0, 29)</li>
+			<li>(81, 0, 29)</li>
+			<li>(82, 0, 29)</li>
+			<li>(83, 0, 29)</li>
+			<li>(84, 0, 29)</li>
+			<li>(85, 0, 29)</li>
+			<li>(86, 0, 29)</li>
+			<li>(87, 0, 29)</li>
+			<li>(235, 0, 29)</li>
+			<li>(236, 0, 29)</li>
+			<li>(237, 0, 29)</li>
+			<li>(57, 0, 30)</li>
+			<li>(60, 0, 30)</li>
+			<li>(63, 0, 30)</li>
+			<li>(236, 0, 30)</li>
+			<li>(60, 0, 31)</li>
+			<li>(61, 0, 31)</li>
+			<li>(65, 0, 31)</li>
+			<li>(236, 0, 31)</li>
+			<li>(238, 0, 31)</li>
+			<li>(58, 0, 32)</li>
+			<li>(59, 0, 32)</li>
+			<li>(60, 0, 32)</li>
+			<li>(63, 0, 32)</li>
+			<li>(235, 0, 32)</li>
+			<li>(237, 0, 32)</li>
+			<li>(239, 0, 32)</li>
+			<li>(58, 0, 33)</li>
+			<li>(60, 0, 33)</li>
+			<li>(61, 0, 33)</li>
+			<li>(65, 0, 33)</li>
+			<li>(66, 0, 33)</li>
+			<li>(239, 0, 33)</li>
+			<li>(57, 0, 34)</li>
+			<li>(58, 0, 34)</li>
+			<li>(59, 0, 34)</li>
+			<li>(60, 0, 34)</li>
+			<li>(62, 0, 34)</li>
+			<li>(64, 0, 34)</li>
+			<li>(66, 0, 34)</li>
+			<li>(58, 0, 35)</li>
+			<li>(59, 0, 35)</li>
+			<li>(61, 0, 35)</li>
+			<li>(64, 0, 35)</li>
+			<li>(66, 0, 35)</li>
+			<li>(236, 0, 35)</li>
+			<li>(237, 0, 35)</li>
+			<li>(57, 0, 36)</li>
+			<li>(58, 0, 36)</li>
+			<li>(60, 0, 36)</li>
+			<li>(62, 0, 36)</li>
+			<li>(63, 0, 36)</li>
+			<li>(65, 0, 36)</li>
+			<li>(66, 0, 36)</li>
+			<li>(163, 0, 36)</li>
+			<li>(238, 0, 36)</li>
+			<li>(239, 0, 36)</li>
+			<li>(56, 0, 37)</li>
+			<li>(58, 0, 37)</li>
+			<li>(59, 0, 37)</li>
+			<li>(60, 0, 37)</li>
+			<li>(62, 0, 37)</li>
+			<li>(63, 0, 37)</li>
+			<li>(64, 0, 37)</li>
+			<li>(65, 0, 37)</li>
+			<li>(66, 0, 37)</li>
+			<li>(67, 0, 37)</li>
+			<li>(164, 0, 37)</li>
+			<li>(58, 0, 38)</li>
+			<li>(59, 0, 38)</li>
+			<li>(60, 0, 38)</li>
+			<li>(61, 0, 38)</li>
+			<li>(62, 0, 38)</li>
+			<li>(63, 0, 38)</li>
+			<li>(64, 0, 38)</li>
+			<li>(65, 0, 38)</li>
+			<li>(66, 0, 38)</li>
+			<li>(162, 0, 38)</li>
+			<li>(57, 0, 39)</li>
+			<li>(58, 0, 39)</li>
+			<li>(59, 0, 39)</li>
+			<li>(60, 0, 39)</li>
+			<li>(61, 0, 39)</li>
+			<li>(62, 0, 39)</li>
+			<li>(63, 0, 39)</li>
+			<li>(65, 0, 39)</li>
+			<li>(66, 0, 39)</li>
+			<li>(161, 0, 39)</li>
+			<li>(163, 0, 39)</li>
+			<li>(58, 0, 40)</li>
+			<li>(60, 0, 40)</li>
+			<li>(61, 0, 40)</li>
+			<li>(62, 0, 40)</li>
+			<li>(63, 0, 40)</li>
+			<li>(65, 0, 40)</li>
+			<li>(105, 0, 42)</li>
+			<li>(107, 0, 42)</li>
+			<li>(110, 0, 42)</li>
+			<li>(105, 0, 43)</li>
+			<li>(109, 0, 43)</li>
+			<li>(106, 0, 44)</li>
+			<li>(108, 0, 44)</li>
+			<li>(110, 0, 44)</li>
+			<li>(108, 0, 45)</li>
+			<li>(110, 0, 45)</li>
+			<li>(106, 0, 46)</li>
+			<li>(109, 0, 46)</li>
+			<li>(41, 0, 49)</li>
+			<li>(39, 0, 50)</li>
+			<li>(41, 0, 50)</li>
+			<li>(42, 0, 50)</li>
+			<li>(44, 0, 50)</li>
+			<li>(43, 0, 51)</li>
+			<li>(43, 0, 52)</li>
+			<li>(42, 0, 53)</li>
+			<li>(42, 0, 54)</li>
+			<li>(38, 0, 55)</li>
+			<li>(40, 0, 55)</li>
+			<li>(41, 0, 55)</li>
+			<li>(37, 0, 56)</li>
+			<li>(38, 0, 56)</li>
+			<li>(39, 0, 56)</li>
+			<li>(41, 0, 56)</li>
+			<li>(42, 0, 56)</li>
+			<li>(37, 0, 57)</li>
+			<li>(38, 0, 57)</li>
+			<li>(39, 0, 57)</li>
+			<li>(40, 0, 57)</li>
+			<li>(42, 0, 57)</li>
+			<li>(43, 0, 57)</li>
+			<li>(36, 0, 58)</li>
+			<li>(37, 0, 58)</li>
+			<li>(38, 0, 58)</li>
+			<li>(39, 0, 58)</li>
+			<li>(40, 0, 58)</li>
+			<li>(42, 0, 58)</li>
+			<li>(43, 0, 58)</li>
+			<li>(44, 0, 58)</li>
+			<li>(37, 0, 59)</li>
+			<li>(38, 0, 59)</li>
+			<li>(40, 0, 59)</li>
+			<li>(41, 0, 59)</li>
+			<li>(42, 0, 59)</li>
+			<li>(43, 0, 59)</li>
+			<li>(75, 0, 65)</li>
+			<li>(77, 0, 65)</li>
+			<li>(78, 0, 65)</li>
+			<li>(77, 0, 66)</li>
+			<li>(76, 0, 67)</li>
+			<li>(77, 0, 67)</li>
+			<li>(78, 0, 67)</li>
+			<li>(79, 0, 67)</li>
+			<li>(75, 0, 68)</li>
+			<li>(76, 0, 68)</li>
+			<li>(78, 0, 68)</li>
+			<li>(79, 0, 68)</li>
+			<li>(74, 0, 69)</li>
+			<li>(79, 0, 69)</li>
+			<li>(78, 0, 70)</li>
+			<li>(182, 0, 83)</li>
+			<li>(183, 0, 83)</li>
+			<li>(187, 0, 83)</li>
+			<li>(188, 0, 83)</li>
+			<li>(189, 0, 83)</li>
+			<li>(190, 0, 83)</li>
+			<li>(191, 0, 83)</li>
+			<li>(192, 0, 83)</li>
+			<li>(183, 0, 84)</li>
+			<li>(189, 0, 84)</li>
+			<li>(190, 0, 84)</li>
+			<li>(191, 0, 84)</li>
+			<li>(192, 0, 84)</li>
+			<li>(183, 0, 85)</li>
+			<li>(186, 0, 85)</li>
+			<li>(187, 0, 85)</li>
+			<li>(188, 0, 85)</li>
+			<li>(190, 0, 85)</li>
+			<li>(191, 0, 85)</li>
+			<li>(192, 0, 85)</li>
+			<li>(183, 0, 86)</li>
+			<li>(185, 0, 86)</li>
+			<li>(188, 0, 86)</li>
+			<li>(189, 0, 86)</li>
+			<li>(190, 0, 86)</li>
+			<li>(184, 0, 87)</li>
+			<li>(186, 0, 87)</li>
+			<li>(188, 0, 87)</li>
+			<li>(189, 0, 87)</li>
+			<li>(190, 0, 87)</li>
+			<li>(183, 0, 88)</li>
+			<li>(187, 0, 88)</li>
+			<li>(188, 0, 88)</li>
+			<li>(189, 0, 88)</li>
+			<li>(190, 0, 88)</li>
+			<li>(191, 0, 88)</li>
+			<li>(184, 0, 89)</li>
+			<li>(185, 0, 89)</li>
+			<li>(186, 0, 89)</li>
+			<li>(189, 0, 89)</li>
+			<li>(190, 0, 89)</li>
+			<li>(191, 0, 89)</li>
+			<li>(182, 0, 90)</li>
+			<li>(188, 0, 90)</li>
+			<li>(190, 0, 90)</li>
+			<li>(192, 0, 90)</li>
+			<li>(183, 0, 91)</li>
+			<li>(184, 0, 91)</li>
+			<li>(185, 0, 91)</li>
+			<li>(186, 0, 91)</li>
+			<li>(188, 0, 91)</li>
+			<li>(189, 0, 91)</li>
+			<li>(191, 0, 91)</li>
+			<li>(182, 0, 92)</li>
+			<li>(184, 0, 92)</li>
+			<li>(185, 0, 92)</li>
+			<li>(186, 0, 92)</li>
+			<li>(187, 0, 92)</li>
+			<li>(189, 0, 92)</li>
+			<li>(187, 0, 93)</li>
+			<li>(189, 0, 93)</li>
+			<li>(190, 0, 93)</li>
+			<li>(184, 0, 94)</li>
+			<li>(188, 0, 94)</li>
+			<li>(36, 0, 109)</li>
+			<li>(37, 0, 109)</li>
+			<li>(39, 0, 109)</li>
+			<li>(40, 0, 109)</li>
+			<li>(35, 0, 110)</li>
+			<li>(37, 0, 110)</li>
+			<li>(38, 0, 110)</li>
+			<li>(40, 0, 110)</li>
+			<li>(37, 0, 111)</li>
+			<li>(39, 0, 111)</li>
+			<li>(40, 0, 111)</li>
+			<li>(41, 0, 111)</li>
+			<li>(38, 0, 112)</li>
+			<li>(39, 0, 112)</li>
+			<li>(40, 0, 112)</li>
+			<li>(42, 0, 112)</li>
+			<li>(37, 0, 113)</li>
+			<li>(39, 0, 113)</li>
+			<li>(40, 0, 113)</li>
+			<li>(41, 0, 113)</li>
+			<li>(37, 0, 114)</li>
+			<li>(40, 0, 114)</li>
+			<li>(37, 0, 115)</li>
+			<li>(38, 0, 115)</li>
+			<li>(40, 0, 115)</li>
+			<li>(41, 0, 115)</li>
+			<li>(35, 0, 116)</li>
+			<li>(36, 0, 116)</li>
+			<li>(37, 0, 116)</li>
+			<li>(38, 0, 116)</li>
+			<li>(39, 0, 116)</li>
+			<li>(40, 0, 116)</li>
+			<li>(42, 0, 116)</li>
+			<li>(37, 0, 117)</li>
+			<li>(38, 0, 117)</li>
+			<li>(39, 0, 117)</li>
+			<li>(41, 0, 117)</li>
+			<li>(36, 0, 118)</li>
+			<li>(37, 0, 118)</li>
+			<li>(39, 0, 118)</li>
+			<li>(40, 0, 118)</li>
+			<li>(38, 0, 119)</li>
+			<li>(40, 0, 119)</li>
+			<li>(41, 0, 119)</li>
+			<li>(70, 0, 134)</li>
+			<li>(71, 0, 134)</li>
+			<li>(72, 0, 134)</li>
+			<li>(73, 0, 134)</li>
+			<li>(74, 0, 134)</li>
+			<li>(75, 0, 134)</li>
+			<li>(76, 0, 134)</li>
+			<li>(72, 0, 135)</li>
+			<li>(73, 0, 135)</li>
+			<li>(75, 0, 135)</li>
+			<li>(70, 0, 136)</li>
+			<li>(71, 0, 136)</li>
+			<li>(72, 0, 136)</li>
+			<li>(75, 0, 136)</li>
+			<li>(71, 0, 137)</li>
+			<li>(70, 0, 138)</li>
+			<li>(70, 0, 139)</li>
+			<li>(71, 0, 139)</li>
+			<li>(73, 0, 139)</li>
+			<li>(75, 0, 139)</li>
+			<li>(53, 0, 150)</li>
+			<li>(54, 0, 150)</li>
+			<li>(56, 0, 150)</li>
+			<li>(57, 0, 150)</li>
+			<li>(53, 0, 151)</li>
+			<li>(54, 0, 151)</li>
+			<li>(55, 0, 151)</li>
+			<li>(56, 0, 151)</li>
+			<li>(57, 0, 151)</li>
+			<li>(54, 0, 152)</li>
+			<li>(55, 0, 152)</li>
+			<li>(57, 0, 152)</li>
+			<li>(53, 0, 153)</li>
+			<li>(54, 0, 153)</li>
+			<li>(55, 0, 153)</li>
+			<li>(56, 0, 153)</li>
+			<li>(57, 0, 153)</li>
+			<li>(170, 0, 164)</li>
+			<li>(171, 0, 164)</li>
+			<li>(172, 0, 164)</li>
+			<li>(169, 0, 165)</li>
+			<li>(170, 0, 165)</li>
+			<li>(171, 0, 165)</li>
+			<li>(172, 0, 165)</li>
+			<li>(173, 0, 165)</li>
+			<li>(170, 0, 166)</li>
+			<li>(171, 0, 166)</li>
+			<li>(170, 0, 167)</li>
+			<li>(172, 0, 167)</li>
+			<li>(169, 0, 168)</li>
+			<li>(170, 0, 168)</li>
+			<li>(171, 0, 168)</li>
+			<li>(172, 0, 168)</li>
+			<li>(173, 0, 168)</li>
+			<li>(170, 0, 169)</li>
+			<li>(171, 0, 169)</li>
+			<li>(172, 0, 169)</li>
+			<li>(60, 0, 197)</li>
+			<li>(62, 0, 197)</li>
+			<li>(61, 0, 198)</li>
+			<li>(62, 0, 198)</li>
+			<li>(61, 0, 199)</li>
+			<li>(62, 0, 199)</li>
+			<li>(60, 0, 200)</li>
+			<li>(61, 0, 200)</li>
+			<li>(62, 0, 200)</li>
+			<li>(118, 0, 211)</li>
+			<li>(119, 0, 211)</li>
+			<li>(120, 0, 211)</li>
+			<li>(121, 0, 211)</li>
+			<li>(122, 0, 211)</li>
+			<li>(123, 0, 211)</li>
+			<li>(124, 0, 211)</li>
+			<li>(125, 0, 211)</li>
+			<li>(117, 0, 212)</li>
+			<li>(118, 0, 212)</li>
+			<li>(119, 0, 212)</li>
+			<li>(120, 0, 212)</li>
+			<li>(121, 0, 212)</li>
+			<li>(122, 0, 212)</li>
+			<li>(123, 0, 212)</li>
+			<li>(124, 0, 212)</li>
+			<li>(125, 0, 212)</li>
+			<li>(117, 0, 213)</li>
+			<li>(118, 0, 213)</li>
+			<li>(119, 0, 213)</li>
+			<li>(120, 0, 213)</li>
+			<li>(121, 0, 213)</li>
+			<li>(122, 0, 213)</li>
+			<li>(123, 0, 213)</li>
+			<li>(124, 0, 213)</li>
+			<li>(125, 0, 213)</li>
+			<li>(117, 0, 214)</li>
+			<li>(118, 0, 214)</li>
+			<li>(119, 0, 214)</li>
+			<li>(120, 0, 214)</li>
+			<li>(121, 0, 214)</li>
+			<li>(122, 0, 214)</li>
+			<li>(123, 0, 214)</li>
+			<li>(124, 0, 214)</li>
+			<li>(125, 0, 214)</li>
+			<li>(116, 0, 215)</li>
+			<li>(117, 0, 215)</li>
+			<li>(118, 0, 215)</li>
+			<li>(119, 0, 215)</li>
+			<li>(120, 0, 215)</li>
+			<li>(121, 0, 215)</li>
+			<li>(122, 0, 215)</li>
+			<li>(123, 0, 215)</li>
+			<li>(124, 0, 215)</li>
+			<li>(125, 0, 215)</li>
+			<li>(117, 0, 216)</li>
+			<li>(118, 0, 216)</li>
+			<li>(119, 0, 216)</li>
+			<li>(120, 0, 216)</li>
+			<li>(121, 0, 216)</li>
+			<li>(122, 0, 216)</li>
+			<li>(123, 0, 216)</li>
+			<li>(124, 0, 216)</li>
+			<li>(125, 0, 216)</li>
+			<li>(117, 0, 217)</li>
+			<li>(118, 0, 217)</li>
+			<li>(119, 0, 217)</li>
+			<li>(120, 0, 217)</li>
+			<li>(121, 0, 217)</li>
+			<li>(122, 0, 217)</li>
+			<li>(123, 0, 217)</li>
+			<li>(124, 0, 217)</li>
+			<li>(125, 0, 217)</li>
+			<li>(117, 0, 218)</li>
+			<li>(118, 0, 218)</li>
+			<li>(119, 0, 218)</li>
+			<li>(120, 0, 218)</li>
+			<li>(121, 0, 218)</li>
+			<li>(122, 0, 218)</li>
+			<li>(123, 0, 218)</li>
+			<li>(124, 0, 218)</li>
+			<li>(125, 0, 218)</li>
+			<li>(114, 0, 219)</li>
+			<li>(115, 0, 219)</li>
+			<li>(116, 0, 219)</li>
+			<li>(117, 0, 219)</li>
+			<li>(118, 0, 219)</li>
+			<li>(119, 0, 219)</li>
+			<li>(120, 0, 219)</li>
+			<li>(121, 0, 219)</li>
+			<li>(122, 0, 219)</li>
+			<li>(123, 0, 219)</li>
+			<li>(124, 0, 219)</li>
+			<li>(125, 0, 219)</li>
+			<li>(114, 0, 220)</li>
+			<li>(115, 0, 220)</li>
+			<li>(116, 0, 220)</li>
+			<li>(117, 0, 220)</li>
+			<li>(118, 0, 220)</li>
+			<li>(119, 0, 220)</li>
+			<li>(120, 0, 220)</li>
+			<li>(121, 0, 220)</li>
+			<li>(122, 0, 220)</li>
+			<li>(123, 0, 220)</li>
+			<li>(124, 0, 220)</li>
+			<li>(125, 0, 220)</li>
+			<li>(31, 0, 221)</li>
+			<li>(32, 0, 221)</li>
+			<li>(33, 0, 221)</li>
+			<li>(34, 0, 221)</li>
+			<li>(35, 0, 221)</li>
+			<li>(37, 0, 221)</li>
+			<li>(117, 0, 221)</li>
+			<li>(118, 0, 221)</li>
+			<li>(119, 0, 221)</li>
+			<li>(120, 0, 221)</li>
+			<li>(121, 0, 221)</li>
+			<li>(122, 0, 221)</li>
+			<li>(123, 0, 221)</li>
+			<li>(124, 0, 221)</li>
+			<li>(125, 0, 221)</li>
+			<li>(31, 0, 222)</li>
+			<li>(33, 0, 222)</li>
+			<li>(34, 0, 222)</li>
+			<li>(36, 0, 222)</li>
+			<li>(39, 0, 222)</li>
+			<li>(40, 0, 222)</li>
+			<li>(117, 0, 222)</li>
+			<li>(118, 0, 222)</li>
+			<li>(119, 0, 222)</li>
+			<li>(120, 0, 222)</li>
+			<li>(121, 0, 222)</li>
+			<li>(122, 0, 222)</li>
+			<li>(123, 0, 222)</li>
+			<li>(124, 0, 222)</li>
+			<li>(125, 0, 222)</li>
+			<li>(31, 0, 223)</li>
+			<li>(32, 0, 223)</li>
+			<li>(33, 0, 223)</li>
+			<li>(35, 0, 223)</li>
+			<li>(37, 0, 223)</li>
+			<li>(39, 0, 223)</li>
+			<li>(42, 0, 223)</li>
+			<li>(117, 0, 223)</li>
+			<li>(118, 0, 223)</li>
+			<li>(119, 0, 223)</li>
+			<li>(120, 0, 223)</li>
+			<li>(121, 0, 223)</li>
+			<li>(122, 0, 223)</li>
+			<li>(123, 0, 223)</li>
+			<li>(124, 0, 223)</li>
+			<li>(125, 0, 223)</li>
+			<li>(31, 0, 224)</li>
+			<li>(32, 0, 224)</li>
+			<li>(33, 0, 224)</li>
+			<li>(34, 0, 224)</li>
+			<li>(35, 0, 224)</li>
+			<li>(36, 0, 224)</li>
+			<li>(37, 0, 224)</li>
+			<li>(38, 0, 224)</li>
+			<li>(39, 0, 224)</li>
+			<li>(40, 0, 224)</li>
+			<li>(116, 0, 224)</li>
+			<li>(117, 0, 224)</li>
+			<li>(118, 0, 224)</li>
+			<li>(119, 0, 224)</li>
+			<li>(120, 0, 224)</li>
+			<li>(121, 0, 224)</li>
+			<li>(122, 0, 224)</li>
+			<li>(123, 0, 224)</li>
+			<li>(124, 0, 224)</li>
+			<li>(125, 0, 224)</li>
+			<li>(33, 0, 225)</li>
+			<li>(34, 0, 225)</li>
+			<li>(35, 0, 225)</li>
+			<li>(36, 0, 225)</li>
+			<li>(37, 0, 225)</li>
+			<li>(117, 0, 225)</li>
+			<li>(118, 0, 225)</li>
+			<li>(119, 0, 225)</li>
+			<li>(120, 0, 225)</li>
+			<li>(121, 0, 225)</li>
+			<li>(122, 0, 225)</li>
+			<li>(123, 0, 225)</li>
+			<li>(124, 0, 225)</li>
+			<li>(125, 0, 225)</li>
+			<li>(207, 0, 225)</li>
+			<li>(211, 0, 225)</li>
+			<li>(33, 0, 226)</li>
+			<li>(34, 0, 226)</li>
+			<li>(37, 0, 226)</li>
+			<li>(117, 0, 226)</li>
+			<li>(118, 0, 226)</li>
+			<li>(119, 0, 226)</li>
+			<li>(120, 0, 226)</li>
+			<li>(121, 0, 226)</li>
+			<li>(122, 0, 226)</li>
+			<li>(123, 0, 226)</li>
+			<li>(124, 0, 226)</li>
+			<li>(125, 0, 226)</li>
+			<li>(212, 0, 226)</li>
+			<li>(223, 0, 226)</li>
+			<li>(35, 0, 227)</li>
+			<li>(38, 0, 227)</li>
+			<li>(117, 0, 227)</li>
+			<li>(118, 0, 227)</li>
+			<li>(119, 0, 227)</li>
+			<li>(120, 0, 227)</li>
+			<li>(121, 0, 227)</li>
+			<li>(122, 0, 227)</li>
+			<li>(123, 0, 227)</li>
+			<li>(124, 0, 227)</li>
+			<li>(125, 0, 227)</li>
+			<li>(212, 0, 227)</li>
+			<li>(237, 0, 227)</li>
+			<li>(118, 0, 228)</li>
+			<li>(119, 0, 228)</li>
+			<li>(120, 0, 228)</li>
+			<li>(121, 0, 228)</li>
+			<li>(122, 0, 228)</li>
+			<li>(123, 0, 228)</li>
+			<li>(124, 0, 228)</li>
+			<li>(125, 0, 228)</li>
+			<li>(207, 0, 228)</li>
+			<li>(219, 0, 228)</li>
+			<li>(221, 0, 228)</li>
+			<li>(224, 0, 228)</li>
+			<li>(238, 0, 228)</li>
+			<li>(239, 0, 228)</li>
+			<li>(35, 0, 229)</li>
+			<li>(37, 0, 229)</li>
+			<li>(38, 0, 229)</li>
+			<li>(207, 0, 229)</li>
+			<li>(208, 0, 229)</li>
+			<li>(209, 0, 229)</li>
+			<li>(222, 0, 229)</li>
+			<li>(223, 0, 229)</li>
+			<li>(237, 0, 229)</li>
+			<li>(34, 0, 230)</li>
+			<li>(36, 0, 230)</li>
+			<li>(37, 0, 230)</li>
+			<li>(38, 0, 230)</li>
+			<li>(207, 0, 230)</li>
+			<li>(208, 0, 230)</li>
+			<li>(210, 0, 230)</li>
+			<li>(213, 0, 230)</li>
+			<li>(224, 0, 230)</li>
+			<li>(238, 0, 230)</li>
+			<li>(34, 0, 231)</li>
+			<li>(35, 0, 231)</li>
+			<li>(37, 0, 231)</li>
+			<li>(211, 0, 231)</li>
+			<li>(212, 0, 231)</li>
+			<li>(213, 0, 231)</li>
+			<li>(214, 0, 231)</li>
+			<li>(215, 0, 231)</li>
+			<li>(218, 0, 231)</li>
+			<li>(223, 0, 231)</li>
+			<li>(239, 0, 231)</li>
+			<li>(35, 0, 232)</li>
+			<li>(36, 0, 232)</li>
+			<li>(37, 0, 232)</li>
+			<li>(38, 0, 232)</li>
+			<li>(209, 0, 232)</li>
+			<li>(213, 0, 232)</li>
+			<li>(215, 0, 232)</li>
+			<li>(216, 0, 232)</li>
+			<li>(217, 0, 232)</li>
+			<li>(212, 0, 233)</li>
+			<li>(214, 0, 233)</li>
+			<li>(215, 0, 233)</li>
+			<li>(216, 0, 233)</li>
+			<li>(217, 0, 233)</li>
+			<li>(220, 0, 233)</li>
+			<li>(221, 0, 233)</li>
+			<li>(222, 0, 233)</li>
+			<li>(223, 0, 233)</li>
+			<li>(208, 0, 234)</li>
+			<li>(209, 0, 234)</li>
+			<li>(210, 0, 234)</li>
+			<li>(211, 0, 234)</li>
+			<li>(214, 0, 234)</li>
+			<li>(215, 0, 234)</li>
+			<li>(216, 0, 234)</li>
+			<li>(217, 0, 234)</li>
+			<li>(218, 0, 234)</li>
+			<li>(219, 0, 234)</li>
+			<li>(237, 0, 234)</li>
+			<li>(238, 0, 234)</li>
+			<li>(239, 0, 234)</li>
+			<li>(208, 0, 235)</li>
+			<li>(209, 0, 235)</li>
+			<li>(210, 0, 235)</li>
+			<li>(211, 0, 235)</li>
+			<li>(212, 0, 235)</li>
+			<li>(213, 0, 235)</li>
+			<li>(214, 0, 235)</li>
+			<li>(215, 0, 235)</li>
+			<li>(216, 0, 235)</li>
+			<li>(217, 0, 235)</li>
+			<li>(219, 0, 235)</li>
+			<li>(221, 0, 235)</li>
+			<li>(222, 0, 235)</li>
+			<li>(223, 0, 235)</li>
+			<li>(237, 0, 235)</li>
+			<li>(239, 0, 235)</li>
+			<li>(207, 0, 236)</li>
+			<li>(208, 0, 236)</li>
+			<li>(209, 0, 236)</li>
+			<li>(210, 0, 236)</li>
+			<li>(212, 0, 236)</li>
+			<li>(214, 0, 236)</li>
+			<li>(215, 0, 236)</li>
+			<li>(216, 0, 236)</li>
+			<li>(217, 0, 236)</li>
+			<li>(220, 0, 236)</li>
+			<li>(221, 0, 236)</li>
+			<li>(223, 0, 236)</li>
+			<li>(237, 0, 236)</li>
+			<li>(238, 0, 236)</li>
+			<li>(209, 0, 237)</li>
+			<li>(211, 0, 237)</li>
+			<li>(212, 0, 237)</li>
+			<li>(213, 0, 237)</li>
+			<li>(214, 0, 237)</li>
+			<li>(215, 0, 237)</li>
+			<li>(216, 0, 237)</li>
+			<li>(217, 0, 237)</li>
+			<li>(218, 0, 237)</li>
+			<li>(220, 0, 237)</li>
+			<li>(221, 0, 237)</li>
+			<li>(222, 0, 237)</li>
+			<li>(237, 0, 237)</li>
+			<li>(238, 0, 237)</li>
+			<li>(239, 0, 237)</li>
+			<li>(116, 0, 238)</li>
+			<li>(117, 0, 238)</li>
+			<li>(118, 0, 238)</li>
+			<li>(119, 0, 238)</li>
+			<li>(120, 0, 238)</li>
+			<li>(121, 0, 238)</li>
+			<li>(122, 0, 238)</li>
+			<li>(123, 0, 238)</li>
+			<li>(124, 0, 238)</li>
+			<li>(125, 0, 238)</li>
+			<li>(126, 0, 238)</li>
+			<li>(127, 0, 238)</li>
+			<li>(128, 0, 238)</li>
+			<li>(208, 0, 238)</li>
+			<li>(209, 0, 238)</li>
+			<li>(210, 0, 238)</li>
+			<li>(213, 0, 238)</li>
+			<li>(214, 0, 238)</li>
+			<li>(215, 0, 238)</li>
+			<li>(216, 0, 238)</li>
+			<li>(217, 0, 238)</li>
+			<li>(219, 0, 238)</li>
+			<li>(220, 0, 238)</li>
+			<li>(221, 0, 238)</li>
+			<li>(222, 0, 238)</li>
+			<li>(223, 0, 238)</li>
+			<li>(237, 0, 238)</li>
+			<li>(238, 0, 238)</li>
+			<li>(239, 0, 238)</li>
+			<li>(116, 0, 239)</li>
+			<li>(117, 0, 239)</li>
+			<li>(118, 0, 239)</li>
+			<li>(119, 0, 239)</li>
+			<li>(120, 0, 239)</li>
+			<li>(121, 0, 239)</li>
+			<li>(122, 0, 239)</li>
+			<li>(123, 0, 239)</li>
+			<li>(124, 0, 239)</li>
+			<li>(125, 0, 239)</li>
+			<li>(126, 0, 239)</li>
+			<li>(127, 0, 239)</li>
+			<li>(128, 0, 239)</li>
+			<li>(209, 0, 239)</li>
+			<li>(211, 0, 239)</li>
+			<li>(212, 0, 239)</li>
+			<li>(213, 0, 239)</li>
+			<li>(214, 0, 239)</li>
+			<li>(215, 0, 239)</li>
+			<li>(216, 0, 239)</li>
+			<li>(217, 0, 239)</li>
+			<li>(218, 0, 239)</li>
+			<li>(219, 0, 239)</li>
+			<li>(220, 0, 239)</li>
+			<li>(221, 0, 239)</li>
+			<li>(222, 0, 239)</li>
+		</keys>
+		<values>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneMarble</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>FlagstoneSlate</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileMarble</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneLimestone</li>
+			<li>FlagstoneSandstone</li>
+			<li>FlagstoneSandstone</li>
+			<li>FlagstoneSandstone</li>
+			<li>FlagstoneSandstone</li>
+			<li>FlagstoneSandstone</li>
+			<li>FlagstoneSandstone</li>
+			<li>FlagstoneSandstone</li>
+			<li>FlagstoneSandstone</li>
+			<li>FlagstoneSandstone</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>Concrete</li>
+			<li>Concrete</li>
+			<li>MetalTile</li>
+			<li>Concrete</li>
+			<li>Concrete</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>Concrete</li>
+			<li>Concrete</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>Concrete</li>
+			<li>Concrete</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>Concrete</li>
+			<li>Concrete</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>Concrete</li>
+			<li>Concrete</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>MetalTile</li>
+			<li>TileSlate</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>TileSlate</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileLimestone</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>TileGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+			<li>FlagstoneGranite</li>
+		</values>
+	</Terrains>
+	<Roofs>
+		<keys>
+			<li>(125, 0, 210)</li>
+			<li>(126, 0, 210)</li>
+			<li>(118, 0, 211)</li>
+			<li>(124, 0, 211)</li>
+			<li>(125, 0, 211)</li>
+			<li>(126, 0, 211)</li>
+			<li>(116, 0, 212)</li>
+			<li>(117, 0, 212)</li>
+			<li>(118, 0, 212)</li>
+			<li>(119, 0, 212)</li>
+			<li>(121, 0, 212)</li>
+			<li>(123, 0, 212)</li>
+			<li>(124, 0, 212)</li>
+			<li>(125, 0, 212)</li>
+			<li>(126, 0, 212)</li>
+			<li>(116, 0, 213)</li>
+			<li>(117, 0, 213)</li>
+			<li>(118, 0, 213)</li>
+			<li>(119, 0, 213)</li>
+			<li>(120, 0, 213)</li>
+			<li>(121, 0, 213)</li>
+			<li>(122, 0, 213)</li>
+			<li>(123, 0, 213)</li>
+			<li>(124, 0, 213)</li>
+			<li>(125, 0, 213)</li>
+			<li>(126, 0, 213)</li>
+			<li>(115, 0, 214)</li>
+			<li>(116, 0, 214)</li>
+			<li>(117, 0, 214)</li>
+			<li>(118, 0, 214)</li>
+			<li>(119, 0, 214)</li>
+			<li>(120, 0, 214)</li>
+			<li>(121, 0, 214)</li>
+			<li>(122, 0, 214)</li>
+			<li>(123, 0, 214)</li>
+			<li>(124, 0, 214)</li>
+			<li>(125, 0, 214)</li>
+			<li>(126, 0, 214)</li>
+			<li>(115, 0, 215)</li>
+			<li>(116, 0, 215)</li>
+			<li>(117, 0, 215)</li>
+			<li>(118, 0, 215)</li>
+			<li>(119, 0, 215)</li>
+			<li>(120, 0, 215)</li>
+			<li>(121, 0, 215)</li>
+			<li>(122, 0, 215)</li>
+			<li>(123, 0, 215)</li>
+			<li>(124, 0, 215)</li>
+			<li>(125, 0, 215)</li>
+			<li>(126, 0, 215)</li>
+			<li>(115, 0, 216)</li>
+			<li>(116, 0, 216)</li>
+			<li>(117, 0, 216)</li>
+			<li>(118, 0, 216)</li>
+			<li>(119, 0, 216)</li>
+			<li>(120, 0, 216)</li>
+			<li>(121, 0, 216)</li>
+			<li>(122, 0, 216)</li>
+			<li>(123, 0, 216)</li>
+			<li>(124, 0, 216)</li>
+			<li>(125, 0, 216)</li>
+			<li>(126, 0, 216)</li>
+			<li>(116, 0, 217)</li>
+			<li>(117, 0, 217)</li>
+			<li>(118, 0, 217)</li>
+			<li>(119, 0, 217)</li>
+			<li>(120, 0, 217)</li>
+			<li>(121, 0, 217)</li>
+			<li>(122, 0, 217)</li>
+			<li>(123, 0, 217)</li>
+			<li>(124, 0, 217)</li>
+			<li>(125, 0, 217)</li>
+			<li>(126, 0, 217)</li>
+			<li>(113, 0, 218)</li>
+			<li>(114, 0, 218)</li>
+			<li>(115, 0, 218)</li>
+			<li>(116, 0, 218)</li>
+			<li>(117, 0, 218)</li>
+			<li>(118, 0, 218)</li>
+			<li>(119, 0, 218)</li>
+			<li>(120, 0, 218)</li>
+			<li>(121, 0, 218)</li>
+			<li>(122, 0, 218)</li>
+			<li>(123, 0, 218)</li>
+			<li>(124, 0, 218)</li>
+			<li>(125, 0, 218)</li>
+			<li>(126, 0, 218)</li>
+			<li>(113, 0, 219)</li>
+			<li>(114, 0, 219)</li>
+			<li>(115, 0, 219)</li>
+			<li>(116, 0, 219)</li>
+			<li>(117, 0, 219)</li>
+			<li>(118, 0, 219)</li>
+			<li>(119, 0, 219)</li>
+			<li>(120, 0, 219)</li>
+			<li>(121, 0, 219)</li>
+			<li>(122, 0, 219)</li>
+			<li>(123, 0, 219)</li>
+			<li>(124, 0, 219)</li>
+			<li>(125, 0, 219)</li>
+			<li>(126, 0, 219)</li>
+			<li>(113, 0, 220)</li>
+			<li>(114, 0, 220)</li>
+			<li>(115, 0, 220)</li>
+			<li>(116, 0, 220)</li>
+			<li>(117, 0, 220)</li>
+			<li>(118, 0, 220)</li>
+			<li>(119, 0, 220)</li>
+			<li>(120, 0, 220)</li>
+			<li>(121, 0, 220)</li>
+			<li>(122, 0, 220)</li>
+			<li>(123, 0, 220)</li>
+			<li>(124, 0, 220)</li>
+			<li>(125, 0, 220)</li>
+			<li>(126, 0, 220)</li>
+			<li>(113, 0, 221)</li>
+			<li>(114, 0, 221)</li>
+			<li>(115, 0, 221)</li>
+			<li>(116, 0, 221)</li>
+			<li>(117, 0, 221)</li>
+			<li>(118, 0, 221)</li>
+			<li>(119, 0, 221)</li>
+			<li>(120, 0, 221)</li>
+			<li>(121, 0, 221)</li>
+			<li>(122, 0, 221)</li>
+			<li>(123, 0, 221)</li>
+			<li>(124, 0, 221)</li>
+			<li>(125, 0, 221)</li>
+			<li>(126, 0, 221)</li>
+			<li>(116, 0, 222)</li>
+			<li>(117, 0, 222)</li>
+			<li>(118, 0, 222)</li>
+			<li>(119, 0, 222)</li>
+			<li>(120, 0, 222)</li>
+			<li>(121, 0, 222)</li>
+			<li>(122, 0, 222)</li>
+			<li>(123, 0, 222)</li>
+			<li>(124, 0, 222)</li>
+			<li>(125, 0, 222)</li>
+			<li>(126, 0, 222)</li>
+			<li>(115, 0, 223)</li>
+			<li>(116, 0, 223)</li>
+			<li>(117, 0, 223)</li>
+			<li>(118, 0, 223)</li>
+			<li>(119, 0, 223)</li>
+			<li>(120, 0, 223)</li>
+			<li>(121, 0, 223)</li>
+			<li>(122, 0, 223)</li>
+			<li>(123, 0, 223)</li>
+			<li>(124, 0, 223)</li>
+			<li>(125, 0, 223)</li>
+			<li>(126, 0, 223)</li>
+			<li>(115, 0, 224)</li>
+			<li>(116, 0, 224)</li>
+			<li>(117, 0, 224)</li>
+			<li>(118, 0, 224)</li>
+			<li>(119, 0, 224)</li>
+			<li>(120, 0, 224)</li>
+			<li>(121, 0, 224)</li>
+			<li>(122, 0, 224)</li>
+			<li>(123, 0, 224)</li>
+			<li>(124, 0, 224)</li>
+			<li>(125, 0, 224)</li>
+			<li>(126, 0, 224)</li>
+			<li>(115, 0, 225)</li>
+			<li>(116, 0, 225)</li>
+			<li>(117, 0, 225)</li>
+			<li>(118, 0, 225)</li>
+			<li>(119, 0, 225)</li>
+			<li>(120, 0, 225)</li>
+			<li>(121, 0, 225)</li>
+			<li>(122, 0, 225)</li>
+			<li>(123, 0, 225)</li>
+			<li>(124, 0, 225)</li>
+			<li>(125, 0, 225)</li>
+			<li>(126, 0, 225)</li>
+			<li>(116, 0, 226)</li>
+			<li>(117, 0, 226)</li>
+			<li>(118, 0, 226)</li>
+			<li>(119, 0, 226)</li>
+			<li>(120, 0, 226)</li>
+			<li>(121, 0, 226)</li>
+			<li>(122, 0, 226)</li>
+			<li>(123, 0, 226)</li>
+			<li>(124, 0, 226)</li>
+			<li>(125, 0, 226)</li>
+			<li>(126, 0, 226)</li>
+			<li>(116, 0, 227)</li>
+			<li>(117, 0, 227)</li>
+			<li>(118, 0, 227)</li>
+			<li>(119, 0, 227)</li>
+			<li>(120, 0, 227)</li>
+			<li>(121, 0, 227)</li>
+			<li>(122, 0, 227)</li>
+			<li>(123, 0, 227)</li>
+			<li>(124, 0, 227)</li>
+			<li>(125, 0, 227)</li>
+			<li>(126, 0, 227)</li>
+			<li>(116, 0, 228)</li>
+			<li>(117, 0, 228)</li>
+			<li>(118, 0, 228)</li>
+			<li>(119, 0, 228)</li>
+			<li>(120, 0, 228)</li>
+			<li>(121, 0, 228)</li>
+			<li>(122, 0, 228)</li>
+			<li>(123, 0, 228)</li>
+			<li>(124, 0, 228)</li>
+			<li>(125, 0, 228)</li>
+			<li>(126, 0, 228)</li>
+			<li>(117, 0, 229)</li>
+			<li>(118, 0, 229)</li>
+			<li>(119, 0, 229)</li>
+			<li>(120, 0, 229)</li>
+			<li>(121, 0, 229)</li>
+			<li>(122, 0, 229)</li>
+			<li>(123, 0, 229)</li>
+			<li>(124, 0, 229)</li>
+			<li>(125, 0, 229)</li>
+			<li>(126, 0, 229)</li>
+		</keys>
+		<values>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+			<li>RoofConstructed</li>
+		</values>
+	</Roofs>
+	<tilesToSpawnPawnsOnThem>
+		<li>(109, 0, 127)</li>
+		<li>(110, 0, 127)</li>
+		<li>(111, 0, 127)</li>
+		<li>(112, 0, 127)</li>
+		<li>(113, 0, 127)</li>
+		<li>(114, 0, 127)</li>
+		<li>(115, 0, 127)</li>
+		<li>(116, 0, 127)</li>
+		<li>(117, 0, 127)</li>
+		<li>(118, 0, 127)</li>
+		<li>(119, 0, 127)</li>
+		<li>(120, 0, 127)</li>
+		<li>(121, 0, 127)</li>
+		<li>(122, 0, 127)</li>
+		<li>(123, 0, 127)</li>
+		<li>(124, 0, 127)</li>
+		<li>(125, 0, 127)</li>
+		<li>(126, 0, 127)</li>
+		<li>(127, 0, 127)</li>
+		<li>(128, 0, 127)</li>
+		<li>(105, 0, 128)</li>
+		<li>(106, 0, 128)</li>
+		<li>(107, 0, 128)</li>
+		<li>(108, 0, 128)</li>
+		<li>(109, 0, 128)</li>
+		<li>(110, 0, 128)</li>
+		<li>(111, 0, 128)</li>
+		<li>(112, 0, 128)</li>
+		<li>(113, 0, 128)</li>
+		<li>(114, 0, 128)</li>
+		<li>(115, 0, 128)</li>
+		<li>(116, 0, 128)</li>
+		<li>(117, 0, 128)</li>
+		<li>(118, 0, 128)</li>
+		<li>(119, 0, 128)</li>
+		<li>(120, 0, 128)</li>
+		<li>(121, 0, 128)</li>
+		<li>(122, 0, 128)</li>
+		<li>(123, 0, 128)</li>
+		<li>(124, 0, 128)</li>
+		<li>(125, 0, 128)</li>
+		<li>(126, 0, 128)</li>
+		<li>(127, 0, 128)</li>
+		<li>(128, 0, 128)</li>
+		<li>(105, 0, 129)</li>
+		<li>(106, 0, 129)</li>
+		<li>(107, 0, 129)</li>
+		<li>(108, 0, 129)</li>
+		<li>(109, 0, 129)</li>
+		<li>(110, 0, 129)</li>
+		<li>(111, 0, 129)</li>
+		<li>(112, 0, 129)</li>
+		<li>(113, 0, 129)</li>
+		<li>(114, 0, 129)</li>
+		<li>(115, 0, 129)</li>
+		<li>(116, 0, 129)</li>
+		<li>(117, 0, 129)</li>
+		<li>(118, 0, 129)</li>
+		<li>(119, 0, 129)</li>
+		<li>(120, 0, 129)</li>
+		<li>(121, 0, 129)</li>
+		<li>(122, 0, 129)</li>
+		<li>(123, 0, 129)</li>
+		<li>(124, 0, 129)</li>
+		<li>(125, 0, 129)</li>
+		<li>(126, 0, 129)</li>
+		<li>(127, 0, 129)</li>
+		<li>(128, 0, 129)</li>
+		<li>(105, 0, 130)</li>
+		<li>(106, 0, 130)</li>
+		<li>(107, 0, 130)</li>
+		<li>(108, 0, 130)</li>
+		<li>(109, 0, 130)</li>
+		<li>(110, 0, 130)</li>
+		<li>(111, 0, 130)</li>
+		<li>(112, 0, 130)</li>
+		<li>(113, 0, 130)</li>
+		<li>(114, 0, 130)</li>
+		<li>(115, 0, 130)</li>
+		<li>(116, 0, 130)</li>
+		<li>(117, 0, 130)</li>
+		<li>(118, 0, 130)</li>
+		<li>(119, 0, 130)</li>
+		<li>(120, 0, 130)</li>
+		<li>(121, 0, 130)</li>
+		<li>(122, 0, 130)</li>
+		<li>(123, 0, 130)</li>
+		<li>(124, 0, 130)</li>
+		<li>(125, 0, 130)</li>
+		<li>(126, 0, 130)</li>
+		<li>(127, 0, 130)</li>
+		<li>(128, 0, 130)</li>
+		<li>(105, 0, 131)</li>
+		<li>(106, 0, 131)</li>
+		<li>(107, 0, 131)</li>
+		<li>(108, 0, 131)</li>
+		<li>(109, 0, 131)</li>
+		<li>(110, 0, 131)</li>
+		<li>(111, 0, 131)</li>
+		<li>(112, 0, 131)</li>
+		<li>(113, 0, 131)</li>
+		<li>(114, 0, 131)</li>
+		<li>(115, 0, 131)</li>
+		<li>(116, 0, 131)</li>
+		<li>(117, 0, 131)</li>
+		<li>(118, 0, 131)</li>
+		<li>(119, 0, 131)</li>
+		<li>(120, 0, 131)</li>
+		<li>(121, 0, 131)</li>
+		<li>(122, 0, 131)</li>
+		<li>(123, 0, 131)</li>
+		<li>(124, 0, 131)</li>
+		<li>(125, 0, 131)</li>
+		<li>(126, 0, 131)</li>
+		<li>(127, 0, 131)</li>
+		<li>(128, 0, 131)</li>
+		<li>(105, 0, 132)</li>
+		<li>(106, 0, 132)</li>
+		<li>(107, 0, 132)</li>
+		<li>(108, 0, 132)</li>
+		<li>(109, 0, 132)</li>
+		<li>(110, 0, 132)</li>
+		<li>(111, 0, 132)</li>
+		<li>(112, 0, 132)</li>
+		<li>(113, 0, 132)</li>
+		<li>(114, 0, 132)</li>
+		<li>(115, 0, 132)</li>
+		<li>(116, 0, 132)</li>
+		<li>(117, 0, 132)</li>
+		<li>(118, 0, 132)</li>
+		<li>(119, 0, 132)</li>
+		<li>(120, 0, 132)</li>
+		<li>(121, 0, 132)</li>
+		<li>(122, 0, 132)</li>
+		<li>(123, 0, 132)</li>
+		<li>(124, 0, 132)</li>
+		<li>(125, 0, 132)</li>
+		<li>(126, 0, 132)</li>
+		<li>(127, 0, 132)</li>
+		<li>(128, 0, 132)</li>
+		<li>(105, 0, 133)</li>
+		<li>(106, 0, 133)</li>
+		<li>(107, 0, 133)</li>
+		<li>(108, 0, 133)</li>
+		<li>(109, 0, 133)</li>
+		<li>(110, 0, 133)</li>
+		<li>(111, 0, 133)</li>
+		<li>(112, 0, 133)</li>
+		<li>(113, 0, 133)</li>
+		<li>(114, 0, 133)</li>
+		<li>(115, 0, 133)</li>
+		<li>(116, 0, 133)</li>
+		<li>(117, 0, 133)</li>
+		<li>(118, 0, 133)</li>
+		<li>(119, 0, 133)</li>
+		<li>(120, 0, 133)</li>
+		<li>(121, 0, 133)</li>
+		<li>(122, 0, 133)</li>
+		<li>(123, 0, 133)</li>
+		<li>(124, 0, 133)</li>
+		<li>(125, 0, 133)</li>
+		<li>(126, 0, 133)</li>
+		<li>(127, 0, 133)</li>
+		<li>(128, 0, 133)</li>
+		<li>(105, 0, 134)</li>
+		<li>(106, 0, 134)</li>
+		<li>(107, 0, 134)</li>
+		<li>(108, 0, 134)</li>
+		<li>(109, 0, 134)</li>
+		<li>(110, 0, 134)</li>
+		<li>(111, 0, 134)</li>
+		<li>(112, 0, 134)</li>
+		<li>(113, 0, 134)</li>
+		<li>(114, 0, 134)</li>
+		<li>(115, 0, 134)</li>
+		<li>(116, 0, 134)</li>
+		<li>(117, 0, 134)</li>
+		<li>(118, 0, 134)</li>
+		<li>(119, 0, 134)</li>
+		<li>(120, 0, 134)</li>
+		<li>(121, 0, 134)</li>
+		<li>(122, 0, 134)</li>
+		<li>(123, 0, 134)</li>
+		<li>(124, 0, 134)</li>
+		<li>(125, 0, 134)</li>
+		<li>(126, 0, 134)</li>
+		<li>(127, 0, 134)</li>
+		<li>(128, 0, 134)</li>
+		<li>(105, 0, 135)</li>
+		<li>(106, 0, 135)</li>
+		<li>(107, 0, 135)</li>
+		<li>(108, 0, 135)</li>
+		<li>(109, 0, 135)</li>
+		<li>(110, 0, 135)</li>
+		<li>(111, 0, 135)</li>
+		<li>(112, 0, 135)</li>
+		<li>(113, 0, 135)</li>
+		<li>(114, 0, 135)</li>
+		<li>(115, 0, 135)</li>
+		<li>(116, 0, 135)</li>
+		<li>(117, 0, 135)</li>
+		<li>(118, 0, 135)</li>
+		<li>(119, 0, 135)</li>
+		<li>(120, 0, 135)</li>
+		<li>(121, 0, 135)</li>
+		<li>(122, 0, 135)</li>
+		<li>(123, 0, 135)</li>
+		<li>(124, 0, 135)</li>
+		<li>(125, 0, 135)</li>
+		<li>(126, 0, 135)</li>
+		<li>(127, 0, 135)</li>
+		<li>(128, 0, 135)</li>
+		<li>(105, 0, 136)</li>
+		<li>(106, 0, 136)</li>
+		<li>(107, 0, 136)</li>
+		<li>(108, 0, 136)</li>
+		<li>(109, 0, 136)</li>
+		<li>(110, 0, 136)</li>
+		<li>(111, 0, 136)</li>
+		<li>(112, 0, 136)</li>
+		<li>(113, 0, 136)</li>
+		<li>(114, 0, 136)</li>
+		<li>(115, 0, 136)</li>
+		<li>(116, 0, 136)</li>
+		<li>(117, 0, 136)</li>
+		<li>(118, 0, 136)</li>
+		<li>(119, 0, 136)</li>
+		<li>(120, 0, 136)</li>
+		<li>(121, 0, 136)</li>
+		<li>(122, 0, 136)</li>
+		<li>(123, 0, 136)</li>
+		<li>(124, 0, 136)</li>
+		<li>(125, 0, 136)</li>
+		<li>(126, 0, 136)</li>
+		<li>(127, 0, 136)</li>
+		<li>(128, 0, 136)</li>
+		<li>(105, 0, 137)</li>
+		<li>(106, 0, 137)</li>
+		<li>(107, 0, 137)</li>
+		<li>(108, 0, 137)</li>
+		<li>(109, 0, 137)</li>
+		<li>(110, 0, 137)</li>
+		<li>(111, 0, 137)</li>
+		<li>(112, 0, 137)</li>
+		<li>(113, 0, 137)</li>
+		<li>(114, 0, 137)</li>
+		<li>(115, 0, 137)</li>
+		<li>(116, 0, 137)</li>
+		<li>(117, 0, 137)</li>
+		<li>(118, 0, 137)</li>
+		<li>(119, 0, 137)</li>
+		<li>(120, 0, 137)</li>
+		<li>(121, 0, 137)</li>
+		<li>(122, 0, 137)</li>
+		<li>(123, 0, 137)</li>
+		<li>(124, 0, 137)</li>
+		<li>(125, 0, 137)</li>
+		<li>(126, 0, 137)</li>
+		<li>(127, 0, 137)</li>
+		<li>(128, 0, 137)</li>
+		<li>(105, 0, 138)</li>
+		<li>(106, 0, 138)</li>
+		<li>(107, 0, 138)</li>
+		<li>(108, 0, 138)</li>
+		<li>(109, 0, 138)</li>
+		<li>(110, 0, 138)</li>
+		<li>(111, 0, 138)</li>
+		<li>(112, 0, 138)</li>
+		<li>(113, 0, 138)</li>
+		<li>(114, 0, 138)</li>
+		<li>(115, 0, 138)</li>
+		<li>(116, 0, 138)</li>
+		<li>(117, 0, 138)</li>
+		<li>(118, 0, 138)</li>
+		<li>(119, 0, 138)</li>
+		<li>(120, 0, 138)</li>
+		<li>(121, 0, 138)</li>
+		<li>(122, 0, 138)</li>
+		<li>(123, 0, 138)</li>
+		<li>(124, 0, 138)</li>
+		<li>(125, 0, 138)</li>
+		<li>(126, 0, 138)</li>
+		<li>(127, 0, 138)</li>
+		<li>(128, 0, 138)</li>
+		<li>(105, 0, 139)</li>
+		<li>(106, 0, 139)</li>
+		<li>(107, 0, 139)</li>
+		<li>(108, 0, 139)</li>
+		<li>(109, 0, 139)</li>
+		<li>(110, 0, 139)</li>
+		<li>(111, 0, 139)</li>
+		<li>(112, 0, 139)</li>
+		<li>(113, 0, 139)</li>
+		<li>(114, 0, 139)</li>
+		<li>(115, 0, 139)</li>
+		<li>(116, 0, 139)</li>
+		<li>(117, 0, 139)</li>
+		<li>(118, 0, 139)</li>
+		<li>(119, 0, 139)</li>
+		<li>(120, 0, 139)</li>
+		<li>(121, 0, 139)</li>
+		<li>(122, 0, 139)</li>
+		<li>(123, 0, 139)</li>
+		<li>(124, 0, 139)</li>
+		<li>(125, 0, 139)</li>
+		<li>(126, 0, 139)</li>
+		<li>(127, 0, 139)</li>
+		<li>(128, 0, 139)</li>
+		<li>(105, 0, 140)</li>
+		<li>(106, 0, 140)</li>
+		<li>(107, 0, 140)</li>
+		<li>(108, 0, 140)</li>
+		<li>(109, 0, 140)</li>
+		<li>(110, 0, 140)</li>
+		<li>(111, 0, 140)</li>
+		<li>(112, 0, 140)</li>
+		<li>(113, 0, 140)</li>
+		<li>(114, 0, 140)</li>
+		<li>(115, 0, 140)</li>
+		<li>(116, 0, 140)</li>
+		<li>(117, 0, 140)</li>
+		<li>(118, 0, 140)</li>
+		<li>(119, 0, 140)</li>
+		<li>(120, 0, 140)</li>
+		<li>(121, 0, 140)</li>
+		<li>(122, 0, 140)</li>
+		<li>(123, 0, 140)</li>
+		<li>(124, 0, 140)</li>
+		<li>(125, 0, 140)</li>
+		<li>(126, 0, 140)</li>
+		<li>(127, 0, 140)</li>
+		<li>(128, 0, 140)</li>
+		<li>(105, 0, 141)</li>
+		<li>(106, 0, 141)</li>
+		<li>(107, 0, 141)</li>
+		<li>(108, 0, 141)</li>
+		<li>(109, 0, 141)</li>
+		<li>(110, 0, 141)</li>
+		<li>(111, 0, 141)</li>
+		<li>(112, 0, 141)</li>
+		<li>(113, 0, 141)</li>
+		<li>(114, 0, 141)</li>
+		<li>(115, 0, 141)</li>
+		<li>(116, 0, 141)</li>
+		<li>(117, 0, 141)</li>
+		<li>(118, 0, 141)</li>
+		<li>(119, 0, 141)</li>
+		<li>(120, 0, 141)</li>
+		<li>(121, 0, 141)</li>
+		<li>(122, 0, 141)</li>
+		<li>(123, 0, 141)</li>
+		<li>(124, 0, 141)</li>
+		<li>(125, 0, 141)</li>
+		<li>(126, 0, 141)</li>
+		<li>(127, 0, 141)</li>
+		<li>(128, 0, 141)</li>
+		<li>(105, 0, 142)</li>
+		<li>(106, 0, 142)</li>
+		<li>(107, 0, 142)</li>
+		<li>(108, 0, 142)</li>
+		<li>(109, 0, 142)</li>
+		<li>(110, 0, 142)</li>
+		<li>(111, 0, 142)</li>
+		<li>(112, 0, 142)</li>
+		<li>(113, 0, 142)</li>
+		<li>(114, 0, 142)</li>
+		<li>(115, 0, 142)</li>
+		<li>(116, 0, 142)</li>
+		<li>(117, 0, 142)</li>
+		<li>(118, 0, 142)</li>
+		<li>(119, 0, 142)</li>
+		<li>(120, 0, 142)</li>
+		<li>(121, 0, 142)</li>
+		<li>(122, 0, 142)</li>
+		<li>(123, 0, 142)</li>
+		<li>(124, 0, 142)</li>
+		<li>(125, 0, 142)</li>
+		<li>(126, 0, 142)</li>
+		<li>(127, 0, 142)</li>
+		<li>(128, 0, 142)</li>
+		<li>(105, 0, 143)</li>
+		<li>(106, 0, 143)</li>
+		<li>(107, 0, 143)</li>
+		<li>(108, 0, 143)</li>
+		<li>(109, 0, 143)</li>
+		<li>(110, 0, 143)</li>
+		<li>(111, 0, 143)</li>
+		<li>(112, 0, 143)</li>
+		<li>(113, 0, 143)</li>
+		<li>(114, 0, 143)</li>
+		<li>(115, 0, 143)</li>
+		<li>(116, 0, 143)</li>
+		<li>(117, 0, 143)</li>
+		<li>(118, 0, 143)</li>
+		<li>(119, 0, 143)</li>
+		<li>(120, 0, 143)</li>
+		<li>(121, 0, 143)</li>
+		<li>(122, 0, 143)</li>
+		<li>(123, 0, 143)</li>
+		<li>(124, 0, 143)</li>
+		<li>(125, 0, 143)</li>
+		<li>(126, 0, 143)</li>
+		<li>(127, 0, 143)</li>
+		<li>(128, 0, 143)</li>
+		<li>(105, 0, 144)</li>
+		<li>(106, 0, 144)</li>
+		<li>(107, 0, 144)</li>
+		<li>(108, 0, 144)</li>
+		<li>(109, 0, 144)</li>
+		<li>(110, 0, 144)</li>
+		<li>(111, 0, 144)</li>
+		<li>(112, 0, 144)</li>
+		<li>(113, 0, 144)</li>
+		<li>(114, 0, 144)</li>
+		<li>(115, 0, 144)</li>
+		<li>(116, 0, 144)</li>
+		<li>(117, 0, 144)</li>
+		<li>(118, 0, 144)</li>
+		<li>(119, 0, 144)</li>
+		<li>(120, 0, 144)</li>
+		<li>(121, 0, 144)</li>
+		<li>(122, 0, 144)</li>
+		<li>(123, 0, 144)</li>
+		<li>(124, 0, 144)</li>
+		<li>(125, 0, 144)</li>
+		<li>(126, 0, 144)</li>
+		<li>(127, 0, 144)</li>
+		<li>(128, 0, 144)</li>
+		<li>(105, 0, 145)</li>
+		<li>(106, 0, 145)</li>
+		<li>(107, 0, 145)</li>
+		<li>(108, 0, 145)</li>
+		<li>(109, 0, 145)</li>
+		<li>(110, 0, 145)</li>
+		<li>(111, 0, 145)</li>
+		<li>(112, 0, 145)</li>
+		<li>(113, 0, 145)</li>
+		<li>(114, 0, 145)</li>
+		<li>(115, 0, 145)</li>
+		<li>(116, 0, 145)</li>
+		<li>(117, 0, 145)</li>
+		<li>(118, 0, 145)</li>
+		<li>(119, 0, 145)</li>
+		<li>(120, 0, 145)</li>
+		<li>(121, 0, 145)</li>
+		<li>(122, 0, 145)</li>
+		<li>(123, 0, 145)</li>
+		<li>(124, 0, 145)</li>
+		<li>(125, 0, 145)</li>
+		<li>(126, 0, 145)</li>
+		<li>(127, 0, 145)</li>
+		<li>(128, 0, 145)</li>
+		<li>(105, 0, 146)</li>
+		<li>(106, 0, 146)</li>
+		<li>(107, 0, 146)</li>
+		<li>(108, 0, 146)</li>
+		<li>(109, 0, 146)</li>
+		<li>(110, 0, 146)</li>
+		<li>(111, 0, 146)</li>
+		<li>(112, 0, 146)</li>
+		<li>(113, 0, 146)</li>
+		<li>(114, 0, 146)</li>
+		<li>(115, 0, 146)</li>
+		<li>(116, 0, 146)</li>
+		<li>(117, 0, 146)</li>
+		<li>(118, 0, 146)</li>
+		<li>(119, 0, 146)</li>
+		<li>(120, 0, 146)</li>
+		<li>(121, 0, 146)</li>
+		<li>(122, 0, 146)</li>
+		<li>(123, 0, 146)</li>
+		<li>(124, 0, 146)</li>
+		<li>(125, 0, 146)</li>
+		<li>(126, 0, 146)</li>
+		<li>(127, 0, 146)</li>
+		<li>(128, 0, 146)</li>
+		<li>(105, 0, 147)</li>
+		<li>(106, 0, 147)</li>
+		<li>(107, 0, 147)</li>
+		<li>(108, 0, 147)</li>
+		<li>(109, 0, 147)</li>
+		<li>(110, 0, 147)</li>
+		<li>(111, 0, 147)</li>
+		<li>(112, 0, 147)</li>
+		<li>(113, 0, 147)</li>
+		<li>(114, 0, 147)</li>
+		<li>(115, 0, 147)</li>
+		<li>(116, 0, 147)</li>
+		<li>(117, 0, 147)</li>
+		<li>(118, 0, 147)</li>
+		<li>(119, 0, 147)</li>
+		<li>(120, 0, 147)</li>
+		<li>(121, 0, 147)</li>
+		<li>(122, 0, 147)</li>
+		<li>(123, 0, 147)</li>
+		<li>(124, 0, 147)</li>
+		<li>(125, 0, 147)</li>
+		<li>(126, 0, 147)</li>
+		<li>(127, 0, 147)</li>
+		<li>(128, 0, 147)</li>
+		<li>(105, 0, 148)</li>
+		<li>(106, 0, 148)</li>
+		<li>(107, 0, 148)</li>
+		<li>(108, 0, 148)</li>
+		<li>(109, 0, 148)</li>
+		<li>(110, 0, 148)</li>
+		<li>(111, 0, 148)</li>
+		<li>(112, 0, 148)</li>
+		<li>(113, 0, 148)</li>
+		<li>(114, 0, 148)</li>
+		<li>(115, 0, 148)</li>
+		<li>(116, 0, 148)</li>
+		<li>(117, 0, 148)</li>
+		<li>(118, 0, 148)</li>
+		<li>(119, 0, 148)</li>
+		<li>(120, 0, 148)</li>
+		<li>(121, 0, 148)</li>
+		<li>(122, 0, 148)</li>
+		<li>(123, 0, 148)</li>
+		<li>(124, 0, 148)</li>
+		<li>(125, 0, 148)</li>
+		<li>(126, 0, 148)</li>
+		<li>(127, 0, 148)</li>
+		<li>(128, 0, 148)</li>
+		<li>(105, 0, 149)</li>
+		<li>(106, 0, 149)</li>
+		<li>(107, 0, 149)</li>
+		<li>(108, 0, 149)</li>
+		<li>(109, 0, 149)</li>
+		<li>(110, 0, 149)</li>
+		<li>(111, 0, 149)</li>
+		<li>(112, 0, 149)</li>
+		<li>(113, 0, 149)</li>
+		<li>(114, 0, 149)</li>
+		<li>(115, 0, 149)</li>
+		<li>(116, 0, 149)</li>
+		<li>(117, 0, 149)</li>
+		<li>(118, 0, 149)</li>
+		<li>(119, 0, 149)</li>
+		<li>(120, 0, 149)</li>
+		<li>(121, 0, 149)</li>
+		<li>(122, 0, 149)</li>
+		<li>(123, 0, 149)</li>
+		<li>(124, 0, 149)</li>
+		<li>(125, 0, 149)</li>
+		<li>(126, 0, 149)</li>
+		<li>(127, 0, 149)</li>
+		<li>(128, 0, 149)</li>
+		<li>(105, 0, 150)</li>
+		<li>(106, 0, 150)</li>
+		<li>(107, 0, 150)</li>
+		<li>(108, 0, 150)</li>
+		<li>(109, 0, 150)</li>
+		<li>(110, 0, 150)</li>
+		<li>(111, 0, 150)</li>
+		<li>(112, 0, 150)</li>
+		<li>(113, 0, 150)</li>
+		<li>(114, 0, 150)</li>
+		<li>(115, 0, 150)</li>
+		<li>(116, 0, 150)</li>
+		<li>(117, 0, 150)</li>
+		<li>(118, 0, 150)</li>
+		<li>(119, 0, 150)</li>
+		<li>(120, 0, 150)</li>
+		<li>(121, 0, 150)</li>
+		<li>(122, 0, 150)</li>
+		<li>(123, 0, 150)</li>
+		<li>(124, 0, 150)</li>
+		<li>(125, 0, 150)</li>
+		<li>(126, 0, 150)</li>
+		<li>(127, 0, 150)</li>
+		<li>(128, 0, 150)</li>
+		<li>(105, 0, 151)</li>
+		<li>(106, 0, 151)</li>
+		<li>(107, 0, 151)</li>
+		<li>(108, 0, 151)</li>
+		<li>(109, 0, 151)</li>
+		<li>(110, 0, 151)</li>
+		<li>(111, 0, 151)</li>
+		<li>(112, 0, 151)</li>
+		<li>(113, 0, 151)</li>
+		<li>(114, 0, 151)</li>
+		<li>(115, 0, 151)</li>
+		<li>(116, 0, 151)</li>
+		<li>(117, 0, 151)</li>
+		<li>(118, 0, 151)</li>
+		<li>(119, 0, 151)</li>
+		<li>(120, 0, 151)</li>
+		<li>(121, 0, 151)</li>
+		<li>(122, 0, 151)</li>
+		<li>(123, 0, 151)</li>
+		<li>(124, 0, 151)</li>
+		<li>(125, 0, 151)</li>
+		<li>(126, 0, 151)</li>
+		<li>(127, 0, 151)</li>
+		<li>(128, 0, 151)</li>
+		<li>(120, 0, 152)</li>
+		<li>(121, 0, 152)</li>
+		<li>(122, 0, 152)</li>
+		<li>(123, 0, 152)</li>
+		<li>(124, 0, 152)</li>
+		<li>(125, 0, 152)</li>
+		<li>(126, 0, 152)</li>
+		<li>(127, 0, 152)</li>
+		<li>(128, 0, 152)</li>
+		<li>(120, 0, 153)</li>
+		<li>(121, 0, 153)</li>
+		<li>(122, 0, 153)</li>
+		<li>(123, 0, 153)</li>
+		<li>(124, 0, 153)</li>
+		<li>(125, 0, 153)</li>
+		<li>(126, 0, 153)</li>
+		<li>(127, 0, 153)</li>
+		<li>(128, 0, 153)</li>
+	</tilesToSpawnPawnsOnThem>
+</Blueprint>

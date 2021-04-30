@@ -86,10 +86,13 @@ namespace Quests
 		[HarmonyPatch(typeof(Settlement), "GetCaravanGizmos")]
 		public class VisitSettlement
 		{
-			[HarmonyPostfix]
-			public static void Postfix(Settlement __instance, ref IEnumerable<Gizmo> __result, Caravan caravan)
+			public static IEnumerable<Gizmo> Postfix(IEnumerable<Gizmo> __result, Settlement __instance, Caravan caravan)
 			{
-				Command_Action command_Action = new Command_Action
+				foreach (var g in __result)
+                {
+					yield return g;
+                }
+				yield return new Command_Action
 				{
 					icon = SettleUtility.SettleCommandTex,
 					defaultLabel = Translator.Translate("VisitSettlement"),
@@ -105,7 +108,6 @@ namespace Quests
 						LongEventHandler.QueueLongEvent(action, "GeneratingMapForNewEncounter", false, null, true);
 					}
 				};
-				__result = CollectionExtensions.AddItem<Gizmo>(__result, command_Action);
 			}
 		}
 
@@ -113,7 +115,6 @@ namespace Quests
 		[HarmonyPatch("SpawnSetup")]
 		public static class Patch_SpawnSetup
 		{
-			[HarmonyPostfix]
 			public static void Postfix(Thing __instance)
 			{
 				if (__instance is Pawn pawn && pawn.RaceProps.Humanlike)

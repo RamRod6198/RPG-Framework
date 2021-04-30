@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<HediffDef> <!--it's just a way to make quest comp saveable, don't delete it-->
+    <defName>DummyNoStarvingHediff</defName>
+	<defaultLabelColor>(0.5, 0.1, 0.5)</defaultLabelColor>
+    <label>dummy no starving</label>
+    <labelNoun>dummy no starving</labelNoun>
+	<description>dummy no starving</description>
+	<isBad>true</isBad>
+	<stages>
+		<li>
+			<label>dummy no starving</label>
+			<hungerRateFactor>0</hungerRateFactor>
+			<becomeVisible>false</becomeVisible>
+			<lifeThreatening>false</lifeThreatening>
+		</li>
+	</stages>
+  </HediffDef>
+</Defs>

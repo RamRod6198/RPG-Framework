@@ -18,10 +18,6 @@ namespace Quests
 			[HarmonyPostfix]
 			private static void Postfix(ref List<Pawn> pawns)
 			{
-<<<<<<< HEAD
-=======
-				Log.Message("Postfix 1");
->>>>>>> 6765b49273e3a65219f60581fa18f517efd372de
 				if (pawns.Count > 0 && Rand.Chance(0.8f))
 				{
 					var candidates = pawns.Where(x => x.def.race.Humanlike 
