@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using RimWorld;
 using Verse;
 
@@ -140,8 +141,8 @@ namespace Quests
                 tilesToSpawnPawnsOnThem.Add(homeCell);
             }
 
-            ModMetaData modMetaData = ModLister.AllInstalledMods.FirstOrDefault((ModMetaData x) =>
-            x != null && x.Name != null && x.Active && x.Name.StartsWith("RPG Framework"));
+            var curModName = LoadedModManager.RunningMods.Where(x => x.assemblies.loadedAssemblies.Contains(Assembly.GetExecutingAssembly())).FirstOrDefault().Name;
+            ModMetaData modMetaData = ModLister.AllInstalledMods.FirstOrDefault((ModMetaData x) => x != null && x.Name != null && x.Active && x.Name == curModName);
             string path = Path.GetFullPath(modMetaData.RootDir.ToString() + "/Presets/" + this.name + ".xml");
 
             Scribe.saver.InitSaving(path, "Blueprint");

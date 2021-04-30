@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using RimWorld;
@@ -53,16 +54,18 @@ namespace Quests
         [DebugAction("General", "Load blueprint")]
         public static void LoadBlueprint()
         {
-            ModMetaData modMetaData = ModLister.AllInstalledMods.FirstOrDefault((ModMetaData x) =>
-                x != null && x.Name != null && x.Active && x.Name.StartsWith("RPG Framework"));
+            var curModName = LoadedModManager.RunningMods.Where(x => x.assemblies.loadedAssemblies.Contains(Assembly.GetExecutingAssembly())).FirstOrDefault().Name;
+            Log.Message("curModName: " + curModName);
+            ModMetaData modMetaData = ModLister.AllInstalledMods.FirstOrDefault((ModMetaData x) => x != null && x.Name != null && x.Active && x.Name == curModName);
             string path = Path.GetFullPath(modMetaData.RootDir.ToString() + "/Presets/");
+            Log.Message("path: " + path);
             DirectoryInfo directoryInfo = new DirectoryInfo(path);
             if (!directoryInfo.Exists)
             {
                 directoryInfo.Create();
             }
             Map map = Find.CurrentMap;
-
+            
             List<DebugMenuOption> list = new List<DebugMenuOption>();
             using (IEnumerator<FileInfo> enumerator = directoryInfo.GetFiles().AsEnumerable().GetEnumerator())
             {
@@ -72,11 +75,14 @@ namespace Quests
                     list.Add(new DebugMenuOption(name, 0, delegate ()
                     {
                         path = path + name;
-                        SettlementGeneration.DoSettlementGeneration(map, path, Faction.OfPlayer, false);
+                        SettlementGeneration.DoSettlementGeneration(map, path, null, Faction.OfPlayer, false);
                     }));
                 }
             }
-            Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
+            if (list.Any())
+            {
+                Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
+            }
         }
 
         [DebugAction("General", "Add quest giver", actionType = DebugActionType.ToolMapForPawns)]

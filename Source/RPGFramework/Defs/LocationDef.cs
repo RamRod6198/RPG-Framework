@@ -13,6 +13,18 @@ namespace Quests
 		public string folderWithPresets;
 
 		public string filePreset;
-	}
+
+        public bool disableCenterCellOffset;
+
+        public FloatRange? percentOfDamagedWalls;
+
+        public FloatRange? percentOfDestroyedWalls;
+
+        public FloatRange? percentOfDamagedFurnitures;
+        public override void PostLoad()
+        {
+            base.PostLoad();
+        }
+    }
 }
 

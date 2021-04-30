@@ -22,7 +22,7 @@ namespace Quests
             base.MapComponentUpdate();
             if (this.DoGeneration && path.Length > 0)
             {
-                SettlementGeneration.DoSettlementGeneration(this.map, this.path, this.map.ParentFaction, false);
+                SettlementGeneration.DoSettlementGeneration(this.map, this.path, this.locationDef, this.map.ParentFaction, false);
                 this.DoGeneration = false;
             }
             if (this.ReFog)
@@ -44,7 +44,7 @@ namespace Quests
 
         public void DoForcedGeneration(bool disableFog)
         {
-            SettlementGeneration.DoSettlementGeneration(this.map, this.path, this.map.ParentFaction, disableFog);
+            SettlementGeneration.DoSettlementGeneration(this.map, this.path, this.locationDef, this.map.ParentFaction, disableFog);
             this.DoGeneration = false;
         }
 
@@ -60,6 +60,7 @@ namespace Quests
 
         public bool ReFog = false;
         public string path = "";
+        public LocationDef locationDef;
 
     }
 }

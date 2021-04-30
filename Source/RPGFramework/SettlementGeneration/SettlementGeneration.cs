@@ -14,11 +14,12 @@ namespace Quests
 {
     public static class SettlementGeneration
     {
-        public static LocationDef GetLocationDefForSettlement(Settlement settlement)
+        public static LocationDef GetLocationDefForMapParent(MapParent mapParent)
         {
             foreach (var locationDef in DefDatabase<LocationDef>.AllDefs)
             {
-                if (locationDef.factionBase == settlement.Faction.def)
+                Log.Message(locationDef.factionBase + " - " + mapParent.Faction.def);
+                if (locationDef.factionBase == mapParent.Faction.def)
                 {
                     return locationDef;
                 }
@@ -26,9 +27,15 @@ namespace Quests
             return null;
         }
 
-        public static void InitialiseSettlementGeneration(Map map, Settlement settlement)
+
+        public static FileInfo GetPresetFor(MapParent mapParent, out LocationDef locationDef)
         {
-            var locationDef = GetLocationDefForSettlement(settlement);
+            locationDef = GetLocationDefForMapParent(mapParent);
+            return GetPresetFor(mapParent, locationDef);
+        }
+
+        public static FileInfo GetPresetFor(MapParent mapParent, LocationDef locationDef)
+        {
             if (locationDef != null)
             {
                 string path = "";
@@ -47,15 +54,25 @@ namespace Quests
                         file = directoryInfo.GetFiles().RandomElement();
                     }
                 }
-                
+
                 if (file != null)
                 {
-                    Log.Message(file.FullName, true);
-                    if (map.GetComponent<MapComponentGeneration>().path.Length == 0)
-                    {
-                        map.GetComponent<MapComponentGeneration>().DoGeneration = true;
-                        map.GetComponent<MapComponentGeneration>().path = file.FullName;
-                    }
+                    return file;
+                }
+            }
+            return null;
+        }
+
+        public static void InitialiseLocationGeneration(Map map, FileInfo file, LocationDef locationDef)
+        {
+            if (locationDef != null && file != null)
+            {
+                var comp = map.GetComponent<MapComponentGeneration>();
+                if (comp.path.Length == 0)
+                {
+                    comp.DoGeneration = true;
+                    comp.path = file.FullName;
+                    comp.locationDef = locationDef;
                 }
             }
         }
@@ -74,30 +91,27 @@ namespace Quests
             return false;
         }
 
-        public static void TryGiveQuestsToPawns(StartQuestDef startQuest, Faction faction, Map map)
+        public static IntVec3 GetCellCenterFor(List<IntVec3> cells)
         {
-            foreach (var questGiver in startQuest.questGiverTypes)
-            {
-                if (questGiver.locations.Where(x => x.factionBase == faction.def).Count() > 0)
-                {
-                    foreach (var pawnKind in questGiver.pawnKindDefs)
-                    {
-                        foreach (var pawn in map.mapPawns.PawnsInFaction(faction).InRandomOrder())
-                        {
-                            if (pawn.kindDef == pawnKind)
-                            {
-                                var questComp = Current.Game.GetComponent<QuestTracker>();
-                                questComp.CreateQuestGiver(pawn, null, questGiver.dialogDef);
-                                return;
-                            }
-                        }
-                    }
-                }
-            }
+            var x_Averages = cells.OrderBy(x => x.x);
+            var x_average = x_Averages.ElementAt(x_Averages.Count() / 2).x;
+            var z_Averages = cells.OrderBy(x => x.z);
+            var z_average = z_Averages.ElementAt(z_Averages.Count() / 2).z;
+            var middleCell = new IntVec3(x_average, 0, z_average);
+            return middleCell;
         }
-        public static void DoSettlementGeneration(Map map, string path, Faction faction, bool disableFog)
+
+        public static IntVec3 GetOffsetPosition(LocationDef locationDef, IntVec3 cell, IntVec3 offset)
         {
-            Log.Message("DoSettlementGeneration");
+            if (locationDef.disableCenterCellOffset)
+            {
+                return cell;
+            }
+            return cell + offset;
+        }
+        public static HashSet<IntVec3> DoSettlementGeneration(Map map, string path, LocationDef locationDef, Faction faction, bool disableFog)
+        {
+            Log.Message("DoSettlementGeneration: " + path + " - " + locationDef);
             if (faction == Faction.OfPlayer || faction == null)
             {
                 faction = Faction.OfAncients;
@@ -106,20 +120,20 @@ namespace Quests
             List<Thing> thingsToDestroy = new List<Thing>();
             HashSet<IntVec3> tilesToProcess = new HashSet<IntVec3>();
 
-            int radiusToClear = 10;
-
-            foreach (var building in map.listerThings.AllThings
-                .Where(x => x is Building && x.Faction == faction && !(x is Mineable)))
-            {
-                foreach (var pos in GenRadial.RadialCellsAround(building.Position, radiusToClear, true))
-                {
-                    if (GenGrid.InBounds(pos, map))
-                    {
-                        tilesToProcess.Add(pos);
-                    }
-                }
-                thingsToDestroy.Add(building);
-            }
+            int radiusToClear = 0;
+            //
+            //foreach (var building in map.listerThings.AllThings
+            //    .Where(x => x is Building && x.Faction == faction && !(x is Mineable)))
+            //{
+            //    foreach (var pos in GenRadial.RadialCellsAround(building.Position, radiusToClear, true))
+            //    {
+            //        if (GenGrid.InBounds(pos, map))
+            //        {
+            //            tilesToProcess.Add(pos);
+            //        }
+            //    }
+            //    thingsToDestroy.Add(building);
+            //}
 
             List<Pawn> pawns = new List<Pawn>();
             List<Building> buildings = new List<Building>();
@@ -136,15 +150,23 @@ namespace Quests
             Scribe_Collections.Look<Thing>(ref things, "Things", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<Plant>(ref plants, "Plants", LookMode.Deep, new object[0]);
 
-            Scribe_Collections.Look<IntVec3, TerrainDef>(ref terrains, "Terrains",
-                LookMode.Value, LookMode.Def, ref terrainKeys, ref terrainValues);
-            Scribe_Collections.Look<IntVec3, RoofDef>(ref roofs, "Roofs",
-                LookMode.Value, LookMode.Def, ref roofsKeys, ref roofsValues);
-
+            Scribe_Collections.Look<IntVec3, TerrainDef>(ref terrains, "Terrains", LookMode.Value, LookMode.Def, ref terrainKeys, ref terrainValues);
+            Scribe_Collections.Look<IntVec3, RoofDef>(ref roofs, "Roofs", LookMode.Value, LookMode.Def, ref roofsKeys, ref roofsValues);
             Scribe_Collections.Look<IntVec3>(ref tilesToSpawnPawnsOnThem, "tilesToSpawnPawnsOnThem", LookMode.Value);
 
 
             Scribe.loader.FinalizeLoading();
+
+            pawns = pawns.Where(x => x != null).ToList();
+            buildings = buildings.Where(x => x != null).ToList();
+            things = things.Where(x => x != null).ToList();
+            plants = plants.Where(x => x != null).ToList();
+
+            var cells = new List<IntVec3>(tilesToSpawnPawnsOnThem);
+            cells.AddRange(buildings.Select(x => x.Position).ToList());
+            var centerCell = GetCellCenterFor(cells);
+            var offset = map.Center - centerCell;
+            Log.Message($"centerCell: {centerCell}, map.Center: {map.Center}, offset: {offset}");
 
             if (pawns != null && pawns.Count > 0)
             {
@@ -152,9 +174,10 @@ namespace Quests
                 {
                     try
                     {
-                        if (GenGrid.InBounds(pawn.Position, map))
+                        var position = GetOffsetPosition(locationDef, pawn.Position, offset);
+                        if (GenGrid.InBounds(position, map))
                         {
-                            GenSpawn.Spawn(pawn, pawn.Position, map, WipeMode.Vanish);
+                            GenSpawn.Spawn(pawn, position, map, WipeMode.Vanish);
                             pawn.SetFaction(faction);
                         }
                     }
@@ -164,12 +187,40 @@ namespace Quests
                     }
                 }
             }
-
+            
+            if (tilesToSpawnPawnsOnThem != null && tilesToSpawnPawnsOnThem.Count > 0)
+            {
+                foreach (var tile in tilesToSpawnPawnsOnThem)
+                {
+                    var position = GetOffsetPosition(locationDef, tile, offset);
+                    try
+                    {
+                        if (GenGrid.InBounds(position, map))
+                        {
+                            var things2 = map.thingGrid.ThingsListAt(position);
+                            foreach (var thing in things2)
+                            {
+                                if (thing is Building || (thing is Plant plant && plant.def != ThingDefOf.Plant_Grass) || IsChunk(thing))
+                                {
+                                    thingsToDestroy.Add(thing);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error("Error in map generating, cant spawn " + position + " - " + ex);
+                    }
+                }
+            }
+            
             if (buildings != null && buildings.Count > 0)
             {
                 foreach (var building in buildings)
                 {
-                    foreach (var pos in GenRadial.RadialCellsAround(building.Position, radiusToClear, true))
+                    var position = GetOffsetPosition(locationDef, building.Position, offset);
+            
+                    foreach (var pos in GenRadial.RadialCellsAround(position, radiusToClear, true))
                     {
                         if (GenGrid.InBounds(pos, map))
                         {
@@ -206,7 +257,7 @@ namespace Quests
                         }
                     }
                 }
-
+            
                 if (thingsToDestroy != null && thingsToDestroy.Count > 0)
                 {
                     for (int i = thingsToDestroy.Count - 1; i >= 0; i--)
@@ -225,14 +276,15 @@ namespace Quests
                         }
                     }
                 }
-
+            
                 foreach (var building in buildings)
                 {
+                    var position = GetOffsetPosition(locationDef, building.Position, offset);
                     try
                     {
-                        if (GenGrid.InBounds(building.Position, map))
+                        if (GenGrid.InBounds(position, map))
                         {
-                            GenSpawn.Spawn(building, building.Position, map, building.Rotation, WipeMode.Vanish);
+                            GenSpawn.Spawn(building, position, map, building.Rotation, WipeMode.Vanish);
                             if (building.def.CanHaveFaction)
                             {
                                 building.SetFaction(faction);
@@ -245,23 +297,45 @@ namespace Quests
                     }
                 }
             }
-
+            
             if (plants != null && plants.Count > 0)
             {
                 foreach (var plant in plants)
                 {
-                    if (map.fertilityGrid.FertilityAt(plant.Position) >= plant.def.plant.fertilityMin)
+                    try
                     {
-                        GenSpawn.Spawn(plant, plant.Position, map, WipeMode.Vanish);
+                        var position = GetOffsetPosition(locationDef, plant.Position, offset);
+            
+                        if (map.fertilityGrid.FertilityAt(position) >= plant.def.plant.fertilityMin)
+                        {
+                            GenSpawn.Spawn(plant, position, map, WipeMode.Vanish);
+                        }
                     }
-                    //if (map.Biome.AllWildPlants.Contains(plant.def))
-                    //{
-                    //    GenSpawn.Spawn(plant, plant.Position, map, WipeMode.Vanish);
-                    //}
-                    //else
-                    //{
-                    //    map.Biome.AllWildPlants.Where(x)
-                    //}
+                    catch (Exception ex)
+                    {
+                        Log.Error("Error in map generating, cant spawn " + plant + " - " + ex);
+                    }
+                }
+            }
+            
+            var containers = map.listerThings.AllThings.Where(x => x is Building_Storage).ToList();
+            if (things != null && things.Count > 0)
+            {
+                foreach (var thing in things)
+                {
+                    try
+                    {
+                        var position = GetOffsetPosition(locationDef, thing.Position, offset);
+                        GenSpawn.Spawn(thing, position, map, WipeMode.Vanish);
+                        if (!(thing is Filth) && !(thing is Building) && !(thing is Plant) && !(thing is Pawn))
+                        {
+                            TryDistributeTo(thing, map, containers, faction != Faction.OfPlayer);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error("Error in map generating, cant spawn " + thing + " - " + ex);
+                    }
                 }
             }
             if (terrains != null && terrains.Count > 0)
@@ -270,9 +344,10 @@ namespace Quests
                 {
                     try
                     {
-                        if (GenGrid.InBounds(terrain.Key, map))
+                        var position = GetOffsetPosition(locationDef, terrain.Key, offset);
+                        if (GenGrid.InBounds(position, map))
                         {
-                            map.terrainGrid.SetTerrain(terrain.Key, terrain.Value);
+                            map.terrainGrid.SetTerrain(position, terrain.Value);
                         }
                     }
                     catch (Exception ex)
@@ -281,16 +356,17 @@ namespace Quests
                     }
                 }
             }
-
             if (roofs != null && roofs.Count > 0)
             {
                 foreach (var roof in roofs)
                 {
                     try
                     {
-                        if (GenGrid.InBounds(roof.Key, map))
+                        var position = GetOffsetPosition(locationDef, roof.Key, offset);
+            
+                        if (GenGrid.InBounds(position, map))
                         {
-                            map.roofGrid.SetRoof(roof.Key, roof.Value);
+                            map.roofGrid.SetRoof(position, roof.Value);
                         }
                     }
                     catch (Exception ex)
@@ -299,7 +375,51 @@ namespace Quests
                     }
                 }
             }
-
+            if (locationDef != null && (locationDef.percentOfDamagedWalls.HasValue || locationDef.percentOfDestroyedWalls.HasValue) || locationDef.percentOfDamagedFurnitures.HasValue)
+            {
+                var walls = map.listerThings.AllThings.Where(x => x.def.IsEdifice() && x.def.defName.ToLower().Contains("wall")).ToList();
+                if (locationDef.percentOfDestroyedWalls.HasValue)
+                {
+                    var percent = locationDef.percentOfDestroyedWalls.Value.RandomInRange * 100f;
+                    var countToTake = (int)((percent * walls.Count()) / 100f);
+                    var wallsToDestroy = walls.InRandomOrder().Take(countToTake).ToList();
+                    for (int num = wallsToDestroy.Count - 1; num >= 0; num--)
+                    {
+                        walls.Remove(wallsToDestroy[num]);
+                        wallsToDestroy[num].DeSpawn();
+                    }
+                    Log.Message($"wall count: {walls.Count()}, percent: {percent}, countTotake: {countToTake}");
+                }
+                if (locationDef.percentOfDamagedWalls.HasValue)
+                {
+                    var percent = locationDef.percentOfDamagedWalls.Value.RandomInRange * 100f;
+                    var countToTake = (int)((percent * walls.Count()) / 100f);
+                    var wallsToDamage = walls.InRandomOrder().Take(countToTake).ToList();
+                    for (int num = wallsToDamage.Count - 1; num >= 0; num--)
+                    {
+                        var damagePercent = Rand.Range(0.3f, 0.6f);
+                        var hitpointsToTake = (int)(wallsToDamage[num].MaxHitPoints * damagePercent);
+                        wallsToDamage[num].HitPoints = hitpointsToTake;
+                    }
+            
+                    Log.Message($"wall count: {walls.Count()}, percent: {percent}, countTotake: {countToTake}");
+                }
+                if (locationDef.percentOfDamagedFurnitures.HasValue)
+                {
+                    var furnitures = map.listerThings.AllThings.Where(x => !walls.Contains(x) && x.def.IsBuildingArtificial).ToList();
+                    var percent = locationDef.percentOfDamagedFurnitures.Value.RandomInRange * 100f;
+                    var countToTake = (int)((percent * furnitures.Count()) / 100f);
+                    var furnituresToDamage = furnitures.InRandomOrder().Take(countToTake).ToList();
+                    for (int num = furnituresToDamage.Count - 1; num >= 0; num--)
+                    {
+                        var damagePercent = Rand.Range(0.3f, 0.6f);
+                        var hitpointsToTake = (int)(furnituresToDamage[num].MaxHitPoints * damagePercent);
+                        furnituresToDamage[num].HitPoints = hitpointsToTake;
+                    }
+                    Log.Message($"wall count: {walls.Count()}, percent: {percent}, countTotake: {countToTake}");
+                }
+            
+            }
             Pawn checker = map.mapPawns.PawnsInFaction(Faction.OfPlayer).FirstOrDefault();
             if (checker != null)
             {
@@ -307,21 +427,10 @@ namespace Quests
                 {
                     if (item.IsForbidden(checker))
                     {
-                        var containers = map.listerThings.AllThings.Where(x => x is Building_Storage &&
-                        map.thingGrid.ThingsListAt(x.Position).Where(y => y.IsForbidden(checker)).Count() == 0);
-                        if (containers != null && containers.Count() > 0)
-                        {
-                            var container = (Building_Storage)GenClosest.ClosestThing_Global
-                                (item.Position, containers, 9999f);
-                            if (container != null)
-                            {
-                                item.Position = container.Position;
-                            }
-                        }
+                        TryDistributeTo(item, map, containers, faction != Faction.OfPlayer);
                     }
                 }
             }
-
             if (faction.def.HasModExtension<SettlementOptionModExtension>())
             {
                 var options = faction.def.GetModExtension<SettlementOptionModExtension>();
@@ -339,41 +448,40 @@ namespace Quests
                         foreach (var i in Enumerable.Range(1, (int)pawn.selectionWeight))
                         {
                             var settler = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawn.kind, faction));
-                            var pos = tilesToSpawnPawnsOnThem.Where(x => map.thingGrid.ThingsListAt(x)
-                            .Where(y => y is Building).Count() == 0).RandomElement();
-                            GenSpawn.Spawn(settler, pos, map);
+                            try
+                            {
+                                var pos = tilesToSpawnPawnsOnThem.Where(x => map.thingGrid.ThingsListAt(x)
+                                .Where(y => y is Building).Count() == 0).RandomElement();
+                                GenSpawn.Spawn(settler, pos, map);
+                            }
+                            catch (Exception ex)
+                            {
+                                Log.Error("Error in map generating, cant spawn " + settler + " - " + ex);
+                            }
                         }
                     }
                 }
             }
-
+            
             foreach (var pawn in map.mapPawns.PawnsInFaction(faction))
             {
-                Hediff dummyHediff = HediffMaker.MakeHediff(QuestsDefOf.DummyNoStarvingHediff, pawn);
-                pawn.health.AddHediff(dummyHediff);
                 var lord = pawn.GetLord();
                 if (lord != null)
                 {
                     map.lordManager.RemoveLord(lord);
                 }
-                var lordJob = new LordJob_DefendPoint();
+                var lordJob = new LordJob_DefendBase();
                 if (tilesToSpawnPawnsOnThem != null && tilesToSpawnPawnsOnThem.Count > 0)
                 {
-                    lordJob = new LordJob_DefendPoint(tilesToSpawnPawnsOnThem.RandomElement());
+                    lordJob = new LordJob_DefendBase(faction, tilesToSpawnPawnsOnThem.RandomElement());
                 }
                 else
                 {
-                    lordJob = new LordJob_DefendPoint(pawn.Position);
+                    lordJob = new LordJob_DefendBase(faction, pawn.Position);
                 }
                 LordMaker.MakeNewLord(faction, lordJob, map, null).AddPawn(pawn);
             }
-
-            foreach (var startQuest in DefDatabase<StartQuestDef>.AllDefs)
-            {
-                TryGiveQuestsToPawns(startQuest, faction, map);
-            }
-
-
+            
             if (disableFog != true)
             {
                 try
@@ -397,6 +505,79 @@ namespace Quests
                                         FloodFillerFog.FloodUnfog(cell, map);
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+            return tilesToSpawnPawnsOnThem.Select(x => GetOffsetPosition(locationDef, x, offset)).ToHashSet();
+        }
+
+        private static void TryDistributeTo(Thing thing, Map map, List<Thing> containers, bool setForbidden)
+        {
+            Dictionary<Thing, List<IntVec3>> containerPlaces = new Dictionary<Thing, List<IntVec3>>();
+            for (int num = containers.Count - 1; num >= 0; num--)
+            {
+                var c = containers[num];
+                foreach (var pos in c.OccupiedRect().Cells)
+                {
+                    bool canPlace = true;
+                    foreach (var t in pos.GetThingList(map))
+                    {
+                        if (t != c && !(t is Filth))
+                        {
+                            canPlace = false;
+                            break;
+                        }
+                    }
+                    if (canPlace)
+                    {
+                        if (containerPlaces.ContainsKey(c))
+                        {
+                            containerPlaces[c].Add(pos);
+                        }
+                        else
+                        {
+                            containerPlaces[c] = new List<IntVec3> { pos };
+                        }
+                    }
+                }
+            }
+
+            if (containerPlaces != null && containerPlaces.Any())
+            {
+                var container = (Building_Storage)GenClosest.ClosestThing_Global(thing.Position, containerPlaces.Keys, 9999f);
+                if (container != null && containerPlaces.TryGetValue(container, out var positions))
+                {
+                    var choosenPos = positions.RandomElement();
+                    containerPlaces[container].Remove(choosenPos);
+                    thing.Position = choosenPos;
+                    if (setForbidden)
+                    {
+                        thing.SetForbidden(true);
+                    }
+                    if (!containerPlaces[container].Any())
+                    {
+                        containerPlaces.Remove(container);
+                    }
+                }
+            }
+        }
+        public static void TryGiveQuestsToPawns(StartQuestDef startQuest, Faction faction, Map map)
+        {
+            foreach (var questGiver in startQuest.questGiverTypes)
+            {
+                if (questGiver.locations.Where(x => x.factionBase == faction.def).Count() > 0)
+                {
+                    foreach (var pawnKind in questGiver.pawnKindDefs)
+                    {
+                        foreach (var pawn in map.mapPawns.PawnsInFaction(faction).InRandomOrder())
+                        {
+                            if (pawn.kindDef == pawnKind)
+                            {
+                                var questComp = Current.Game.GetComponent<QuestTracker>();
+                                questComp.CreateQuestGiver(pawn, null, questGiver.dialogDef);
+                                return;
                             }
                         }
                     }
