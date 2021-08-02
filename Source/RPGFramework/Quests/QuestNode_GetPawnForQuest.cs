@@ -149,7 +149,7 @@ namespace Quests
 							   where kind.race.race.Humanlike
 							   select kind).RandomElement<PawnKindDef>();
 			}
-			Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnKindDef, faction, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, true, false, false, false, false, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, fixedTitle));
+			Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnKindDef, faction, PawnGenerationContext.NonPlayer, -1, fixedTitle: fixedTitle));
 			Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Decide);
 			if (pawn.royalty != null && pawn.royalty.AllTitlesForReading.Any<RoyalTitle>())
 			{
@@ -249,7 +249,7 @@ namespace Quests
 			}
 			for (int i = 0; i < title.bedroomRequirements.Count; i++)
 			{
-				if (!title.bedroomRequirements[i].PlayerHasResearched())
+				if (!title.bedroomRequirements[i].PlayerCanBuildNow())
 				{
 					return false;
 				}

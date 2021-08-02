@@ -6,7 +6,7 @@ using System.Reflection;
 using RimWorld;
 using Verse;
 
-namespace Quests
+namespace LocationGeneration
 {
     public class Dialog_NameBlueprint : Dialog_Rename
     {
@@ -51,6 +51,9 @@ namespace Quests
             this.name = name;
             Map map = Find.CurrentMap;
             List<Pawn> pawns = new List<Pawn>();
+            List<Corpse> corpses = new List<Corpse>();
+            List<Pawn> pawnCorpses = new List<Pawn>();
+            List<Filth> filths = new List<Filth>();
             List<Building> buildings = new List<Building>();
             List<Thing> things = new List<Thing>();
             List<Plant> plants = new List<Plant>();
@@ -60,12 +63,21 @@ namespace Quests
 
             foreach (var thing in map.listerThings.AllThings)
             {
-                if (thing is Gas || thing is Mote || thing is Filth) continue;
-                if (thing is Pawn pawn)
+                if (thing is Gas || thing is Mote) continue;
+                if (thing is Corpse corpse && map.areaManager.Home[thing.Position])
+                {
+                    corpses.Add(corpse);
+                    pawnCorpses.Add(corpse.InnerPawn);
+                }
+                else if (thing is Filth filth && map.areaManager.Home[thing.Position])
+                {
+                    filths.Add(filth);
+                }
+                else if (thing is Pawn pawn)
                 {
                     if (this.includePawns)
                     {
-                        if (pawn.def.race.Humanlike || pawn.Faction == Faction.OfPlayer)
+                        if (map.areaManager.Home[pawn.Position])
                         {
                             Log.Message("0 Adding " + pawn, true);
                             pawns.Add(pawn);
@@ -81,7 +93,7 @@ namespace Quests
                         plants.Add(plant);
                     }
                 }
-                else if (thing is Building building && building.Faction == Faction.OfPlayer)
+                else if (thing is Building building && thing.Map.areaManager.Home[building.Position])
                 {
                     Log.Message("2 Adding " + thing, true);
                     buildings.Add(building);
@@ -91,7 +103,6 @@ namespace Quests
                     Log.Message("3 Adding " + thing, true);
                     things.Add(thing);
                 }
-
             }
 
             List<Thing> rocks = new List<Thing>();
@@ -123,16 +134,19 @@ namespace Quests
 
             foreach (IntVec3 intVec in map.AllCells)
             {
-                var terrain = intVec.GetTerrain(map);
-                if (terrain != null && map.terrainGrid.CanRemoveTopLayerAt(intVec))
+                if (map.areaManager.Home[intVec])
                 {
-                    terrains[intVec] = terrain;
-                }
+                    var terrain = intVec.GetTerrain(map);
+                    if (terrain != null && map.terrainGrid.CanRemoveTopLayerAt(intVec))
+                    {
+                        terrains[intVec] = terrain;
+                    }
 
-                var roof = intVec.GetRoof(map);
-                if (roof != null && !map.roofGrid.RoofAt(intVec).isNatural)
-                {
-                    roofs[intVec] = roof;
+                    var roof = intVec.GetRoof(map);
+                    if (roof != null && !map.roofGrid.RoofAt(intVec).isNatural)
+                    {
+                        roofs[intVec] = roof;
+                    }
                 }
             }
 
@@ -146,19 +160,19 @@ namespace Quests
             string path = Path.GetFullPath(modMetaData.RootDir.ToString() + "/Presets/" + this.name + ".xml");
 
             Scribe.saver.InitSaving(path, "Blueprint");
+            Scribe_Collections.Look<Pawn>(ref pawnCorpses, "PawnCorpses", LookMode.Deep, new object[0]);
+            Scribe_Collections.Look<Corpse>(ref corpses, "Corpses", LookMode.Deep, new object[0]);
             if (this.includePawns)
             {
                 Scribe_Collections.Look<Pawn>(ref pawns, "Pawns", LookMode.Deep, new object[0]);
             }
             Scribe_Collections.Look<Building>(ref buildings, "Buildings", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<Thing>(ref things, "Things", LookMode.Deep, new object[0]);
+            Scribe_Collections.Look<Filth>(ref filths, "Filths", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<Plant>(ref plants, "Plants", LookMode.Deep, new object[0]);
-            Scribe_Collections.Look<IntVec3, TerrainDef>(ref terrains, "Terrains",
-                LookMode.Value, LookMode.Def, ref terrainKeys, ref terrainValues);
-            Scribe_Collections.Look<IntVec3, RoofDef>(ref roofs, "Roofs",
-                LookMode.Value, LookMode.Def, ref roofsKeys, ref roofsValues);
+            Scribe_Collections.Look<IntVec3, TerrainDef>(ref terrains, "Terrains", LookMode.Value, LookMode.Def, ref terrainKeys, ref terrainValues);
+            Scribe_Collections.Look<IntVec3, RoofDef>(ref roofs, "Roofs", LookMode.Value, LookMode.Def, ref roofsKeys, ref roofsValues);
             Scribe_Collections.Look<IntVec3>(ref tilesToSpawnPawnsOnThem, "tilesToSpawnPawnsOnThem", LookMode.Value);
-
             Scribe.saver.FinalizeSaving();
         }
 

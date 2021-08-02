@@ -16,7 +16,7 @@ namespace Quests
         }
         public override void DoAction()
         {
-            this.window.talker.Faction.RelationWith(Faction.OfPlayer).goodwill -= 20;
+            this.window.talker.Faction.TryAffectGoodwillWith(Faction.OfPlayer, -20);
             Job job = JobMaker.MakeJob(JobDefOf.AttackMelee, this.window.initiator);
             this.window.talker.jobs.TryTakeOrderedJob(job);
         }

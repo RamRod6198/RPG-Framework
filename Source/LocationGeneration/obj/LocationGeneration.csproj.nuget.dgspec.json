@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\RPGFramework\\RPGFramework.csproj": {}
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\LocationGeneration\\LocationGeneration.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\RPGFramework\\RPGFramework.csproj": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\LocationGeneration\\LocationGeneration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\RPGFramework\\RPGFramework.csproj",
-        "projectName": "RPGFramework",
-        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\RPGFramework\\RPGFramework.csproj",
+        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\LocationGeneration\\LocationGeneration.csproj",
+        "projectName": "LocationGeneration",
+        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\LocationGeneration\\LocationGeneration.csproj",
         "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\RPGFramework\\obj\\",
+        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\LocationGeneration\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -40,7 +40,7 @@
             },
             "Lib.Harmony": {
               "target": "Package",
-              "version": "[2.0.4, )"
+              "version": "[2.1.0, )"
             }
           }
         }

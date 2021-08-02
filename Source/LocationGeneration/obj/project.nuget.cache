@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "0KUaSeTyC3ggmKF6hPC/qvYBXqhxpR2d3hdetBJS3EwpbPcQh6S26oDrGuOaDJwqD1o1YLhjeo7RkAw3OQz1pw==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\LocationGeneration\\LocationGeneration.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3076\\krafs.rimworld.ref.1.3.3076.nupkg.sha512",
+    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.1.0\\lib.harmony.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

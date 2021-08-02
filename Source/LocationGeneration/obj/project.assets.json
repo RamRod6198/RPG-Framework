@@ -85,7 +85,7 @@
           "ref/net472/mscorlib.dll": {}
         }
       },
-      "Lib.Harmony/2.0.4": {
+      "Lib.Harmony/2.1.0": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -179,7 +179,7 @@
           "ref/net472/mscorlib.dll": {}
         }
       },
-      "Lib.Harmony/2.0.4": {
+      "Lib.Harmony/2.1.0": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -273,7 +273,7 @@
           "ref/net472/mscorlib.dll": {}
         }
       },
-      "Lib.Harmony/2.0.4": {
+      "Lib.Harmony/2.1.0": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -367,7 +367,7 @@
           "ref/net472/mscorlib.dll": {}
         }
       },
-      "Lib.Harmony/2.0.4": {
+      "Lib.Harmony/2.1.0": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -470,16 +470,16 @@
         "ref/net472/mscorlib.dll"
       ]
     },
-    "Lib.Harmony/2.0.4": {
-      "sha512": "m4Lm5W2pYU6+aTJpeUzHsX12chKXynIZPlsM5tV6O+WQxs3xa+teQHBjCNFXePDB1HXiiuAmtjyCo/E9fRuSIg==",
+    "Lib.Harmony/2.1.0": {
+      "sha512": "Fp/Ky297MdU+iBQ44xFnJP1RwgDz/RrWaQBDqkqFlWMxDJrmuIkr2DCiiojGnTDf4Qz0YjXepDj0bChHgU1/vQ==",
       "type": "package",
-      "path": "lib.harmony/2.0.4",
+      "path": "lib.harmony/2.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "HarmonyLogo.png",
         "LICENSE",
-        "lib.harmony.2.0.4.nupkg.sha512",
+        "lib.harmony.2.1.0.nupkg.sha512",
         "lib.harmony.nuspec",
         "lib/net35/0Harmony.dll",
         "lib/net35/0Harmony.xml",
@@ -489,6 +489,8 @@
         "lib/net472/0Harmony.xml",
         "lib/net48/0Harmony.dll",
         "lib/net48/0Harmony.xml",
+        "lib/net5.0/0Harmony.dll",
+        "lib/net5.0/0Harmony.xml",
         "lib/netcoreapp3.0/0Harmony.dll",
         "lib/netcoreapp3.0/0Harmony.xml",
         "lib/netcoreapp3.1/0Harmony.dll",
@@ -499,7 +501,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "Krafs.Rimworld.Ref >= 1.3.3076",
-      "Lib.Harmony >= 2.0.4"
+      "Lib.Harmony >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -508,11 +510,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\RPGFramework\\RPGFramework.csproj",
-      "projectName": "RPGFramework",
-      "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\RPGFramework\\RPGFramework.csproj",
+      "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\LocationGeneration\\LocationGeneration.csproj",
+      "projectName": "LocationGeneration",
+      "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\LocationGeneration\\LocationGeneration.csproj",
       "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-      "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\RPGFramework\\obj\\",
+      "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\LocationGeneration\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -541,7 +543,7 @@
           },
           "Lib.Harmony": {
             "target": "Package",
-            "version": "[2.0.4, )"
+            "version": "[2.1.0, )"
           }
         }
       }

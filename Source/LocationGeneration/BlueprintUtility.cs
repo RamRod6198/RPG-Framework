@@ -5,11 +5,11 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace Quests
+namespace LocationGeneration
 {
     public static class BlueprintUtility
     {
-        public static void SaveEverything(string path, Map map, string elementName)
+        public static void SaveEverything(string path, Map map)
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(Path.GetDirectoryName(path));
             if (!directoryInfo.Exists)
@@ -17,9 +17,11 @@ namespace Quests
                 directoryInfo.Create();
             }
             List<Pawn> pawns = new List<Pawn>();
+            List<Pawn> pawnCorpses = new List<Pawn>();
+            List<Corpse> corpses = new List<Corpse>();
+            List<Filth> filths = new List<Filth>();
             List<Building> buildings = new List<Building>();
             List<Thing> things = new List<Thing>();
-            List<Filth> filths = new List<Filth>();
             List<Plant> plants = new List<Plant>();
             Dictionary<IntVec3, TerrainDef> terrains = new Dictionary<IntVec3, TerrainDef>();
             Dictionary<IntVec3, RoofDef> roofs = new Dictionary<IntVec3, RoofDef>();
@@ -28,13 +30,18 @@ namespace Quests
             foreach (var thing in map.listerThings.AllThings)
             {
                 if (thing is Gas || thing is Mote) continue;
-                if (thing is Pawn pawn)
+                if (thing is Corpse corpse)
                 {
-                    pawns.Add(pawn);
+                    corpses.Add(corpse);
+                    pawnCorpses.Add(corpse.InnerPawn);
                 }
                 else if (thing is Filth filth)
                 {
                     filths.Add(filth);
+                }
+                else if (thing is Pawn pawn)
+                {
+                    pawns.Add(pawn);
                 }
                 else if (thing is Plant plant)
                 {
@@ -42,10 +49,12 @@ namespace Quests
                 }
                 else if (thing is Building building)
                 {
+                    Log.Message("2 Adding " + thing, true);
                     buildings.Add(building);
                 }
                 else
                 {
+                    Log.Message("3 Adding " + thing, true);
                     things.Add(thing);
                 }
             }
@@ -63,8 +72,6 @@ namespace Quests
                 {
                     roofs[intVec] = roof;
                 }
-
-                var homeArea = intVec.GetZone(map);
             }
 
             foreach (IntVec3 homeCell in map.areaManager.Home.ActiveCells)
@@ -72,18 +79,17 @@ namespace Quests
                 tilesToSpawnPawnsOnThem.Add(homeCell);
             }
 
-            Scribe.saver.InitSaving(path, elementName);
+            Scribe.saver.InitSaving(path, "Blueprint");
+            Scribe_Collections.Look<Pawn>(ref pawnCorpses, "PawnCorpses", LookMode.Deep, new object[0]);
+            Scribe_Collections.Look<Corpse>(ref corpses, "Corpses", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<Pawn>(ref pawns, "Pawns", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<Building>(ref buildings, "Buildings", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<Filth>(ref filths, "Filths", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<Thing>(ref things, "Things", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<Plant>(ref plants, "Plants", LookMode.Deep, new object[0]);
-            Scribe_Collections.Look<IntVec3, TerrainDef>(ref terrains, "Terrains",
-                LookMode.Value, LookMode.Def, ref terrainKeys, ref terrainValues);
-            Scribe_Collections.Look<IntVec3, RoofDef>(ref roofs, "Roofs",
-                LookMode.Value, LookMode.Def, ref roofsKeys, ref roofsValues);
+            Scribe_Collections.Look<IntVec3, TerrainDef>(ref terrains, "Terrains", LookMode.Value, LookMode.Def, ref terrainKeys, ref terrainValues);
+            Scribe_Collections.Look<IntVec3, RoofDef>(ref roofs, "Roofs", LookMode.Value, LookMode.Def, ref roofsKeys, ref roofsValues);
             Scribe_Collections.Look<IntVec3>(ref tilesToSpawnPawnsOnThem, "tilesToSpawnPawnsOnThem", LookMode.Value);
-
             Scribe.saver.FinalizeSaving();
         }
 

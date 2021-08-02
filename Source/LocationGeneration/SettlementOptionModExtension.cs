@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using RimWorld;
 using Verse;
 
-namespace Quests
+namespace LocationGeneration
 {
     public class SettlementOptionModExtension : DefModExtension
     {

@@ -6,7 +6,7 @@ using System.Reflection;
 using RimWorld;
 using Verse;
 
-namespace Quests
+namespace LocationGeneration
 {
     public class Dialog_SaveEverything : Dialog_Rename
     {
@@ -23,7 +23,7 @@ namespace Quests
             ModMetaData modMetaData = ModLister.AllInstalledMods.FirstOrDefault((ModMetaData x) => x != null && x.Name != null && x.Active && x.Name == curModName);
 
             string path = Path.GetFullPath(modMetaData.RootDir.ToString() + "/Presets/" + this.name + ".xml");
-            BlueprintUtility.SaveEverything(path, map, "Blueprint");
+            BlueprintUtility.SaveEverything(path, map);
         }
 
         private string name;

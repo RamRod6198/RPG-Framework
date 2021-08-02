@@ -16,7 +16,7 @@ namespace Quests
         }
         public override void DoAction()
         {
-            this.window.talker.Faction.RelationWith(Faction.OfPlayer).goodwill += this.affectGoodwill;
+            this.window.talker.Faction.TryAffectGoodwillWith(Faction.OfPlayer, this.affectGoodwill);
         }
     }
 }

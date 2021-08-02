@@ -1,0 +1,18 @@
+c:\GAMES\Rimworld\Mods\Teleporter-WIP\1.2\Source\LocationGeneration\obj\Debug\LocationGeneration.csproj.CoreCompileInputs.cache
+c:\GAMES\Rimworld\Mods\Teleporter-WIP\1.2\Source\LocationGeneration\bin\Debug\LocationGeneration.dll
+c:\GAMES\Rimworld\Mods\Teleporter-WIP\1.2\Source\LocationGeneration\bin\Debug\LocationGeneration.pdb
+c:\GAMES\Rimworld\Mods\Teleporter-WIP\1.2\Source\LocationGeneration\bin\Debug\0Harmony.dll
+c:\GAMES\Rimworld\Mods\Teleporter-WIP\1.2\Source\LocationGeneration\obj\Debug\LocationGeneration.csproj.CopyComplete
+c:\GAMES\Rimworld\Mods\Teleporter-WIP\1.2\Source\LocationGeneration\obj\Debug\LocationGeneration.dll
+c:\GAMES\Rimworld\Mods\Teleporter-WIP\1.2\Assemblies\LocationGeneration.dll
+c:\Games\Rimworld\Mods\Teleporter-WIP\1.2\Source\LocationGeneration\obj\Debug\LocationGeneration.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Teleporter-WIP\1.3\Assemblies\LocationGeneration.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Teleporter-WIP\1.3\Source\LocationGeneration\obj\Debug\LocationGeneration.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Teleporter-WIP\1.3\Source\LocationGeneration\obj\Debug\LocationGeneration.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Teleporter-WIP\1.3\Source\LocationGeneration\obj\Debug\LocationGeneration.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Teleporter-WIP\1.3\Source\LocationGeneration\obj\Debug\LocationGeneration.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RPG-Framework\Assemblies\LocationGeneration.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RPG-Framework\Source\LocationGeneration\obj\Debug\LocationGeneration.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RPG-Framework\Source\LocationGeneration\obj\Debug\LocationGeneration.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RPG-Framework\Source\LocationGeneration\obj\Debug\LocationGeneration.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RPG-Framework\Source\LocationGeneration\obj\Debug\LocationGeneration.dll

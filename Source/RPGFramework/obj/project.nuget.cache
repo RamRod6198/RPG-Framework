@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6dKn7EOV9UTYczWu0MqtwT64NAfGZOjjz+kfpCvRNfpIWH25FuHxRMUZJbiNw4rIdxdePROznBpyvum+MiqmCg==",
+  "dgSpecHash": "R3JVmOIIQXp2AySK1tWb56wnuc9+VVCQIZCSrmmT6Omu29J+VSDh2v1g5sT6Fmz2fthfLrcY/q04oJ7UNZoPBw==",
   "success": true,
-  "projectFilePath": "c:\\GAMES\\Rimworld\\Mods\\RPG-Framework\\Source\\RPGFramework\\RPGFramework.csproj",
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RPG-Framework\\Source\\RPGFramework\\RPGFramework.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.2.2900\\krafs.rimworld.ref.1.2.2900.nupkg.sha512",
+    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3076\\krafs.rimworld.ref.1.3.3076.nupkg.sha512",
     "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.0.4\\lib.harmony.2.0.4.nupkg.sha512"
   ],
   "logs": []

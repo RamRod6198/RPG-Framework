@@ -9,7 +9,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace Quests
+namespace LocationGeneration
 {
     [StaticConstructorOnStartup]
     public static class Actions
@@ -64,7 +64,6 @@ namespace Quests
             {
                 directoryInfo.Create();
             }
-            Map map = Find.CurrentMap;
             
             List<DebugMenuOption> list = new List<DebugMenuOption>();
             using (IEnumerator<FileInfo> enumerator = directoryInfo.GetFiles().AsEnumerable().GetEnumerator())
@@ -75,6 +74,7 @@ namespace Quests
                     list.Add(new DebugMenuOption(name, 0, delegate ()
                     {
                         path = path + name;
+                        Map map = Find.CurrentMap;
                         SettlementGeneration.DoSettlementGeneration(map, path, null, Faction.OfPlayer, false);
                     }));
                 }
@@ -83,34 +83,6 @@ namespace Quests
             {
                 Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
             }
-        }
-
-        [DebugAction("General", "Add quest giver", actionType = DebugActionType.ToolMapForPawns)]
-        public static void AddQuestGiver(Pawn p)
-        {
-            var questComp = Current.Game.GetComponent<QuestTracker>();
-            questComp.CreateQuestGiver(p);
-        }
-
-        [DebugAction("General", "Add quest giver (with specific quest)", actionType = DebugActionType.ToolMapForPawns)]
-        public static void AddQuestGiverSpecifi(Pawn p)
-        {
-            List<DebugMenuOption> list = new List<DebugMenuOption>();
-            using (IEnumerator<QuestScriptDef> enumerator = DefDatabase<QuestScriptDef>.AllDefs.GetEnumerator())
-            {
-                while (enumerator.MoveNext())
-                {
-                    string name = enumerator.Current.defName;
-                    list.Add(new DebugMenuOption(name, 0, delegate ()
-                    {
-                        var specificQuests = new List<QuestScriptDef>();
-                        specificQuests.Add(enumerator.Current);
-                        var questComp = Current.Game.GetComponent<QuestTracker>();
-                        questComp.CreateQuestGiver(p, specificQuests);
-                    }));
-                }
-            }
-            Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
         }
     }
 }

@@ -8,16 +8,16 @@ using RimWorld.BaseGen;
 using RimWorld.Planet;
 using Verse;
 using Verse.AI.Group;
-using static Quests.GetOrGenerateMapPatch;
+using static LocationGeneration.GetOrGenerateMapPatch;
 
-namespace Quests
+namespace LocationGeneration
 {
     [StaticConstructorOnStartup]
     static class HarmonyContainer
     {
         static HarmonyContainer()
         {
-            Harmony harmony = new Harmony("RPGFramework.HarmonyPatches");
+            Harmony harmony = new Harmony("LocationGeneration.HarmonyPatches");
             harmony.PatchAll();
         }
     }
@@ -123,11 +123,49 @@ namespace Quests
             return false;
         }
     }
+    [HarmonyPatch(typeof(CaravanArrivalAction_VisitSite))]
+    [HarmonyPatch("Arrived")]
+    public static class CaravanVisitSitePatch
+    {
+        public static void Prefix(CaravanArrivalAction_VisitSite __instance, Caravan caravan, Site ___site)
+        {
+            caravanArrival = true;
+            Log.Message("GetOrGenerateMapPatch.caravanArrival true");
+        }
+        public static void Postfix(CaravanArrivalAction_VisitSite __instance, Caravan caravan, Site ___site)
+        {
+            if (!___site.HasMap)
+            {
+                LongEventHandler.QueueLongEvent(delegate ()
+                {
+                    var filePreset = SettlementGeneration.GetPresetFor(___site, out LocationDef locationDef);
+                    if (filePreset != null)
+                    {
+                        customSettlementGeneration = true;
+                        locationData = new LocationData { file = filePreset, locationDef = locationDef };
+                    }
+                    Map orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(___site.Tile, null);
+                    CaravanEnterMapUtility.Enter(caravan, orGenerateMap, CaravanEnterMode.Edge, 0, true, null);
+
+                    if (filePreset != null)
+                    {
+                        SettlementGeneration.InitialiseLocationGeneration(orGenerateMap, filePreset, locationDef);
+                    }
+                }, "GeneratingMapForNewEncounter", false, null, true);
+            }
+        }
+    }
+
 
     [HarmonyPatch(typeof(CaravanArrivalAction_VisitSettlement))]
     [HarmonyPatch("Arrived")]
     public static class CaravanVisitPatch
     {
+        public static void Prefix(CaravanArrivalAction_VisitSettlement __instance, Caravan caravan, Settlement ___settlement)
+        {
+            caravanArrival = true;
+            Log.Message("GetOrGenerateMapPatch.caravanArrival true");
+        }
         public static void Postfix(CaravanArrivalAction_VisitSettlement __instance, Caravan caravan, Settlement ___settlement)
         {
             if (!___settlement.HasMap)
@@ -137,10 +175,9 @@ namespace Quests
                     var filePreset = SettlementGeneration.GetPresetFor(___settlement, out LocationDef locationDef);
                     if (filePreset != null)
                     {
-                        GetOrGenerateMapPatch.customSettlementGeneration = true;
-                        GetOrGenerateMapPatch.locationData = new LocationData { file = filePreset, locationDef = locationDef };
+                        customSettlementGeneration = true;
+                        locationData = new LocationData { file = filePreset, locationDef = locationDef };
                     }
-
                     Map orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(___settlement.Tile, null);
                     CaravanEnterMapUtility.Enter(caravan, orGenerateMap, CaravanEnterMode.Edge, 0, true, null);
 
@@ -148,15 +185,43 @@ namespace Quests
                     {
                         SettlementGeneration.InitialiseLocationGeneration(orGenerateMap, filePreset, locationDef);
                     }
+
                 }, "GeneratingMapForNewEncounter", false, null, true);
                 return;
             }
-
             Map orGenerateMap2 = GetOrGenerateMapUtility.GetOrGenerateMap(___settlement.Tile, null);
             CaravanEnterMapUtility.Enter(caravan, orGenerateMap2, CaravanEnterMode.Edge, 0, true, null);
         }
     }
 
+    [HarmonyPatch(typeof(MapGenerator))]
+    [HarmonyPatch("GenerateMap")]
+    public static class GenerateMapPatch
+    {
+        public static void Prefix(ref IntVec3 mapSize, MapParent parent, MapGeneratorDef mapGenerator, IEnumerable<GenStepWithParams> extraGenStepDefs = null, Action<Map> extraInitBeforeContentGen = null)
+        {
+            var worldComp = Find.World.GetComponent<WorldComponentGeneration>();
+            if (worldComp.tileSizes.ContainsKey(parent.Tile))
+            {
+                mapSize = worldComp.tileSizes[parent.Tile];
+                worldComp.tileSizes.Remove(parent.Tile);
+                Log.Message("Changing map size to " + mapSize);
+            }
+        }
+
+        public static void Postfix(IntVec3 mapSize, MapParent parent, MapGeneratorDef mapGenerator, IEnumerable<GenStepWithParams> extraGenStepDefs = null, Action<Map> extraInitBeforeContentGen = null)
+        {
+            Log.Message("GetOrGenerateMapPatch.caravanArrival: " + GetOrGenerateMapPatch.caravanArrival);
+            if (!caravanArrival)
+            {
+                var preset = SettlementGeneration.GetPresetFor(parent, out LocationDef locationDef);
+                if (preset != null && locationDef != null)
+                {
+                    SettlementGeneration.DoSettlementGeneration(parent.Map, preset.FullName, locationDef, parent.Faction, false);
+                }
+            }
+        }
+    }
     [HarmonyPatch(typeof(SettlementUtility), "AttackNow")]
     public class GetOrGenerateMapPatch
     {
@@ -167,6 +232,7 @@ namespace Quests
         }
 
         public static bool customSettlementGeneration;
+        public static bool caravanArrival;
         public static LocationData locationData;
 
         public static void Prefix(ref Caravan caravan, ref Settlement settlement)
@@ -186,92 +252,4 @@ namespace Quests
             }
         }
     }
-
-    //[HarmonyPatch(typeof(Settlement), "GetCaravanGizmos")]
-    //public class VisitSettlement
-    //{
-    //      [HarmonyPostfix]
-    //      public static void Postfix(Settlement __instance, ref IEnumerable<Gizmo> __result, Caravan caravan)
-    //      {
-    //              Command_Action command_Action = new Command_Action
-    //              {
-    //                      icon = SettleUtility.SettleCommandTex,
-    //                      defaultLabel = Translator.Translate("VisitSettlement"),
-    //                      defaultDesc = Translator.Translate("VisitSettlementDesc"),
-    //                      action = delegate ()
-    //                      {
-    //                              Action action = delegate ()
-    //                              {
-    //                                      Map orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(__instance.Tile, null);
-    //                                      CaravanEnterMapUtility.Enter(caravan, orGenerateMap, CaravanEnterMode.Edge, 0, true, null);
-    //                                      SettlementGeneration.InitialiseSettlementGeneration(orGenerateMap, __instance);
-    //                              };
-    //                              LongEventHandler.QueueLongEvent(action, "GeneratingMapForNewEncounter", false, null, true);
-    //                      }
-    //              };
-    //              __result = HarmonyLib.CollectionExtensions.AddItem<Gizmo>(__result, command_Action);
-    //      }
-    //}
-
-    //[HarmonyPatch(typeof(Site), "GetCaravanGizmos")]
-    //public class VisitSite
-    //{
-    //      [HarmonyPostfix]
-    //      public static void Postfix(Site __instance, ref IEnumerable<Gizmo> __result, Caravan caravan)
-    //      {
-    //              Command_Action command_Action = new Command_Action
-    //              {
-    //                      icon = SettleUtility.SettleCommandTex,
-    //                      defaultLabel = Translator.Translate("VisitSite"),
-    //                      defaultDesc = Translator.Translate("VisitSiteDesc"),
-    //                      action = delegate ()
-    //                      {
-    //                              Action action = delegate ()
-    //                              {
-    //                                      Map orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(__instance.Tile, null);
-    //                                      CaravanEnterMapUtility.Enter(caravan, orGenerateMap, CaravanEnterMode.Edge, 0, true, null);
-    //                              };
-    //                              LongEventHandler.QueueLongEvent(action, "GeneratingMapForNewEncounter", false, null, true);
-    //                      }
-    //              };
-    //              __result = CollectionExtensions.AddItem<Gizmo>(__result, command_Action);
-    //      }
-    //}
-
-    //internal class SettlementBase_FloatPatch
-    //{
-    //      [HarmonyPatch(typeof(Settlement), "get_Visitable")]
-    //      public class VisitSettlementFloat
-    //      {
-    //              [HarmonyPostfix]
-    //              public static void Postfix(Settlement __instance, ref bool __result)
-    //              {
-    //                      //List<FloatMenuOption> list = __result.ToList<FloatMenuOption>();
-    //                      //CaravanArrivalAction_VisitSettlement test =
-    //                      //foreach (FloatMenuOption floatMenuOption in CaravanArrivalAction_VisitSettlement
-    //                      //      .GetFloatMenuOptions(caravan, __instance))
-    //                      //{
-    //                      //      list.Add(floatMenuOption);
-    //                      //}
-    //                      __result = true;
-    //              }
-    //      }
-    //
-    //      [HarmonyPatch(typeof(Site), "get_Visitable")]
-    //      public class VisitSiteFloat
-    //      {
-    //              [HarmonyPostfix]
-    //              public static void Postfix(Site __instance, ref bool __result)
-    //              {
-    //                      //List<FloatMenuOption> list = __result.ToList<FloatMenuOption>();
-    //                      //CaravanArrivalAction_VisitSettlement test =
-    //                      //foreach (FloatMenuOption floatMenuOption in CaravanArrivalAction_VisitSettlement
-    //                      //      .GetFloatMenuOptions(caravan, __instance))
-    //                      //{
-    //                      //      list.Add(floatMenuOption);
-    //                      //}
-    //                      __result = true;
-    //              }
-    //      }
-    //
 }

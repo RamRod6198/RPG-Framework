@@ -199,7 +199,7 @@ namespace Quests
                             Pawn pawn = slate.Get<Pawn>("asker", null, false);
                             if (pawn.royalty.AllTitlesForReading.NullOrEmpty<RoyalTitle>())
                             {
-                                pawn.royalty.SetTitle(Faction.Empire, RoyalTitleDefOf.Knight, false, false, true);
+                                pawn.royalty.SetTitle(Faction.OfEmpire, RoyalTitleDefOf.Knight, false, false, true);
                                 Messages.Message("Dev: Gave " + RoyalTitleDefOf.Knight.label + " title to " + pawn.LabelCap, pawn, MessageTypeDefOf.NeutralEvent, false);
                             }
                         }
